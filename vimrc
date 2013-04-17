@@ -15,6 +15,7 @@ call pathogen#helptags()
 "显示/隐藏工具栏 F2
 "代码折叠 <space>
 "整理js <leader>ff
+"easy motion（快速定位）<leader<leader>w /定位到指定字符 <leader>leader>f<char>
 
 if(has("win32") || has("win95") || has("win64") || has("win16")) "判定当前操作系统类型
     let g:iswindows=1
