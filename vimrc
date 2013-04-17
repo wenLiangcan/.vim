@@ -214,6 +214,9 @@ set completeopt=menu "不显示详细信息
 "Indent Guides(对齐线)
 let g:indent_guides_guide_size=1
 
+"powerline
+let g:Powerline_symbols = 'fancy'
+
 "查看一下某几行的字符是否在同一列上
 map ,ch :call SetColorColumn()<CR>"按下,ch 就可以将当前光标下的列高亮，再按下一次，取消高亮；并且可以同时多列高亮
 function! SetColorColumn()
