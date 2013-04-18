@@ -218,7 +218,8 @@ let g:indent_guides_guide_size=1
 "set guifont=PowerlineSymbols\ for\ Powerline
 set nocompatible
 set t_Co=256
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
+set laststatus=2
 
 
 "查看一下某几行的字符是否在同一列上
