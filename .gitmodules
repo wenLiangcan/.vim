@@ -10,3 +10,6 @@
 [submodule "bundle/VimIRC.vim"]
 	path = bundle/VimIRC.vim
 	url = https://github.com/vim-scripts/VimIRC.vim.git
+[submodule "bundle/HTML-AutoCloseTag"]
+	path = bundle/HTML-AutoCloseTag
+	url = https://github.com/vim-scripts/HTML-AutoCloseTag.git
