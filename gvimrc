@@ -11,6 +11,11 @@
 "显示/隐藏工具栏 F2
 "代码折叠 <space>
 "整理js <leader>ff
+"easy motion（快速定位）<leader<leader>w /定位到指定字符 <leader>leader>f<char>
+"全屏 F11
+"降低窗口透明度 Shift + t 
+"加大窗口透明度 Shift + y 
+"切换Vim是否总在最前面显示 Shift + r 
 
 
 "配色
