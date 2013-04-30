@@ -14,8 +14,7 @@
 
 
 "配色
-colorscheme github_c
-
+"colorscheme github_c
 
 "When .vimrc/ .gvimrc is edited, reload it
 autocmd! bufwritepost .vimrc source ~/.vimrc

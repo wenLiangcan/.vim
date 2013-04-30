@@ -57,8 +57,14 @@ set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI "记住空格用下划线代替哦
 set gfw=幼圆:h10.5:cGB2312
 
 "配色
-colorscheme twilight
-set t_Co=256"终端配色兼容设置
+"colorscheme twilight
+"set t_Co=256"终端配色兼容设置
+colorscheme solarized
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
 
 au BufRead,BufNewFile *.js set syntax=jquery
 
