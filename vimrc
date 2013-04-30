@@ -54,10 +54,10 @@ if(g:iswindows==1) "允许鼠标的使用
 endif
 "字体的设置
 set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI "记住空格用下划线代替哦
-set gfw=幼圆:h10.5:cGB2312   
+set gfw=幼圆:h10.5:cGB2312
 
 "配色
-colorscheme jellybeans
+colorscheme twilight
 set t_Co=256"终端配色兼容设置
 
 au BufRead,BufNewFile *.js set syntax=jquery
