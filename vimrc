@@ -359,7 +359,7 @@ endfunction
 "    endwhile
 "    call AddTitle()
 "endfunction
-""""""""""""""""一上命令现由AutorInfo替代，可支持更多语言
+""""""""""""""""以上命令现由AutorInfo替代，可支持更多语言
 let g:vimrc_author='wenLiangcan'
 let g:vimrc_email='wenLiangcan@gmail.com'
 "let g:vimrc_homepage=''
