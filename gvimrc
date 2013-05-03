@@ -25,7 +25,7 @@
 autocmd! bufwritepost .vimrc source ~/.vimrc
 autocmd! bufwritepost .gvimrc source ~/.gvimrc
 
-set lines=30 columns=70"窗口大小
+set lines=30 columns=90"窗口大小
 set guioptions-=r "隐藏右侧滚动条
 
 " {{{ Win平台下窗口全屏组件 gvimfullscreen.dll

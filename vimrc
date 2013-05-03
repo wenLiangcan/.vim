@@ -16,6 +16,8 @@ call pathogen#helptags()
 "代码折叠 <space>
 "整理js <leader>ff
 "easy motion（快速定位）<leader<leader>w /定位到指定字符 <leader>leader>f<char>
+"Ctrl + s to save 
+nmap <C-s> :w<CR>
 
 if(has("win32") || has("win95") || has("win64") || has("win16")) "判定当前操作系统类型
     let g:iswindows=1
@@ -53,13 +55,19 @@ if(g:iswindows==1) "允许鼠标的使用
     au GUIEnter * simalt ~x
 endif
 "字体的设置
-set guifont=Bitstream_Vera_Sans_Mono:h11:cANSI "记住空格用下划线代替哦
+set guifont=Bitstream_Vera_Sans_Mono_for_Po:h11:cANSI"记住空格用下划线代替哦
 set gfw=幼圆:h11.5:cGB2312
+
+"set the menu and the message to English
+set langmenu=en_US
+let $LANG='en_US'
 
 "配色
 "colorscheme twilight
 "set t_Co=256"终端配色兼容设置
 colorscheme solarized
+let g:solarized_termcolors=256
+"let g:solarized_visibility = "high"
 if has('gui_running')
     set background=light
 else
@@ -224,7 +232,7 @@ let g:indent_guides_guide_size=1
 "set guifont=PowerlineSymbols\ for\ Powerline
 set nocompatible
 set t_Co=256
-"let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'fancy'
 set laststatus=2
 
 
