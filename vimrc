@@ -19,8 +19,8 @@ call pathogen#helptags()
 "easy motion（快速定位）<leader<leader>w /定位到指定字符 <leader>leader>f<char>
 "Ctrl + s to save 
 nmap <C-s> :w<CR>
-"Ctrl + w to exit
-nmap <C-w> :q<CR>
+"Shift + w to exit
+nmap <S-w> :q<CR>
 "快速编辑当前文件所在路径下的各文件 ,e
 
 "Set mapleader
