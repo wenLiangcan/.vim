@@ -5,7 +5,7 @@ call pathogen#helptags()
 
 """快捷键説明"""
 "leader键为,
-"编辑vim配置文件 ,ee(gvim为 ,eg
+"编辑vim配置文件 ,vv(gvim为 ,vg
 "重载配置文件 ,ss(gvim为 ,sg
 "生成tag文件 F12
 "呼出Tlist F3
@@ -21,6 +21,7 @@ call pathogen#helptags()
 nmap <C-s> :w<CR>
 "Ctrl + w to exit
 nmap <C-w> :q<CR>
+"快速编辑当前文件所在路径下的各文件 ,e
 
 "Set mapleader
 let mapleader = ","
@@ -28,8 +29,8 @@ let mapleader = ","
 map <silent> <leader>ss :source ~/.vimrc<cr>
 map <silent> <leader>sg :source ~/.gvimrc<cr>
 "Fast editing of .vimrc/ .gvimrc
-map <silent> <leader>ee :e ~/.vimrc<cr>
-map <silent> <leader>eg :e ~/.gvimrc<cr>
+map <silent> <leader>vv :e ~/.vimrc<cr>
+map <silent> <leader>vg :e ~/.gvimrc<cr>
 "When .vimrc is edited, reload it
 autocmd! bufwritepost .vimrc source ~/.vimrc 
 
@@ -142,6 +143,13 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
 winpos 285 100"窗口启动位置
 "colo peachpuff"本色方案
 """""""""""Gvim
+
+"快速编辑当前文件所在路径下的各文件
+if(g:iswindows==1)
+        map <leader>e :e <C-R>=expand("%:p:h") . "\\" <CR>
+else
+        map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+endif
 
 "调整cscope和ctags的兼容性
 if has("cscope")
