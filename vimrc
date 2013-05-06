@@ -1,4 +1,5 @@
 set nocp
+call pathogen#runtime_append_all_bundles()
 call pathogen#infect()
 call pathogen#helptags()
 
@@ -18,11 +19,32 @@ call pathogen#helptags()
 "easy motion（快速定位）<leader<leader>w /定位到指定字符 <leader>leader>f<char>
 "Ctrl + s to save 
 nmap <C-s> :w<CR>
+"Ctrl + w to exit
+nmap <C-w> :q<CR>
+
+"Set mapleader
+let mapleader = ","
+"Fast reloading of the .vimrc/ .gvimrc
+map <silent> <leader>ss :source ~/.vimrc<cr>
+map <silent> <leader>sg :source ~/.gvimrc<cr>
+"Fast editing of .vimrc/ .gvimrc
+map <silent> <leader>ee :e ~/.vimrc<cr>
+map <silent> <leader>eg :e ~/.gvimrc<cr>
+"When .vimrc is edited, reload it
+autocmd! bufwritepost .vimrc source ~/.vimrc 
+
+"用空格键来开关代码折叠
+"set foldenable
+"set foldmethod=indent
+"nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 
 if(has("win32") || has("win95") || has("win64") || has("win16")) "判定当前操作系统类型
     let g:iswindows=1
 else
     let g:iswindows=0
+endif
+if(g:iswindows==1)
+        behave mswin
 endif
 autocmd BufEnter * lcd %:p:h
 set nocompatible "不要vim模仿vi模式，建议设置，否则会有很多不兼容的问题
@@ -54,13 +76,19 @@ if(g:iswindows==1) "允许鼠标的使用
     endif
     au GUIEnter * simalt ~x
 endif
-"字体的设置
-set guifont=Bitstream_Vera_Sans_Mono_for_Po:h11:cANSI"记住空格用下划线代替哦
-set gfw=幼圆:h11.5:cGB2312
+
+filetype indent on
 
 "set the menu and the message to English
 set langmenu=en_US
 let $LANG='en_US'
+
+"关闭鸣声提示
+set noerrorbells
+set novisualbell
+
+set nu"显示行号
+set guitablabel=%N.%t "给tab加上序号
 
 "配色
 "colorscheme twilight
@@ -94,22 +122,9 @@ if v:lang =~? '^\(zh\)\|\(ja\)\|\(ko\)'
 endif
 set nobomb
 
-"Set mapleader
-let mapleader = ","
-"Fast reloading of the .vimrc/ .gvimrc
-map <silent> <leader>ss :source ~/.vimrc<cr>
-map <silent> <leader>sg :source ~/.gvimrc<cr>
-"Fast editing of .vimrc/ .gvimrc
-map <silent> <leader>ee :e ~/.vimrc<cr>
-map <silent> <leader>eg :e ~/.gvimrc<cr>
-"When .vimrc is edited, reload it
-autocmd! bufwritepost .vimrc source ~/.vimrc 
-
-set nu"显示行号
-"用空格键来开关代码折叠
-"set foldenable
-"set foldmethod=indent
-"nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+"字体的设置
+set guifont=Bitstream_Vera_Sans_Mono_for_Po:h11:cANSI"记住空格用下划线代替哦
+set gfw=幼圆:h11.5:cGB2312
 
 """""""""""Gvim
 "Toggle Menu and Toolbar
@@ -127,6 +142,14 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
 winpos 285 100"窗口启动位置
 "colo peachpuff"本色方案
 """""""""""Gvim
+
+"调整cscope和ctags的兼容性
+if has("cscope")
+        set cscopequickfix=s-,c-,d-,i-,t-,e-
+        set csto=0
+        set cst
+        set csverb
+endif
 
 "IDE
 map <F12> :call Do_CsTag()<CR>
@@ -205,8 +228,22 @@ let Tlist_Exit_OnlyWindow=1 "当taglist是最后一个分割窗口时，自动推出vim
 let Tlist_Process_File_Always=0 "是否一直处理tags.1:处理;0:不处理。不是一直实时更新tags，因为没有必要
 let Tlist_Inc_Winwidth=0
 
+"Ctags.vim
+let g:ctags_statusline=1
+let generate_tags=1
+let g:ctags_title=1
+
 "omnicppcomplete
 set completeopt=menu "不显示详细信息
+let OmniCpp_ClobalScopeSearch=1
+let OmniCpp_NamespaceSearch=1   " 0 ,  1 or 2  
+let OmniCpp_DisplayMode=1  
+let OmniCpp_ShowScopeInAbbr=0  
+let OmniCpp_ShowPrototypeInAbbr=1  
+let OmniCpp_ShowAccess=1  
+let OmniCpp_MayCompleteDot=1  
+let OmniCpp_MayCompleteArrow=1  
+let OmniCpp_MayCompleteScope=1
 
 "NERD_commenter
 "let NERDShutUp=1 "光标所在行上，按下一次ctrl+h是注释，再按下一次是取消注释
@@ -248,6 +285,12 @@ function! SetColorColumn()
     endif
 endfunction
 
+"latex-suite
+filetype plugin on
+if(g:iswindows==1)
+        set shellslash
+endif
+set grepprg=grep\ -nH\ $*
 
 "单个文件编译
 map <F5> :call Do_OneFileMake()<CR>
