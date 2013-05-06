@@ -3,43 +3,56 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#infect()
 call pathogen#helptags()
 
-"""¿ì½İ¼üÕhÃ÷"""
-"leader¼üÎª,
-"±à¼­vimÅäÖÃÎÄ¼ş ,vv(gvimÎª ,vg
-"ÖØÔØÅäÖÃÎÄ¼ş ,ss(gvimÎª ,sg
-"Éú³ÉtagÎÄ¼ş F12
-"ºô³öTlist F3
-"²é¿´¶àĞĞ×Ö·û¶ÔÆë ,ch
-"Ò»¼ü±àÒë F5
+"""å¿«æ·é”®èª¬æ˜"""
+"leaderé”®ä¸º,
+"ç¼–è¾‘vimé…ç½®æ–‡ä»¶ ,vv(gvimä¸º ,vg
+"é‡è½½é…ç½®æ–‡ä»¶ ,ss(gvimä¸º ,sg
+"ç”Ÿæˆtagæ–‡ä»¶ F12
+"å‘¼å‡ºTlist F3
+"æŸ¥çœ‹å¤šè¡Œå­—ç¬¦å¯¹é½ ,ch
+"ä¸€é”®ç¼–è¯‘ F5
 "make F6
-"Ìí¼Ó°æÈ¨ĞÅÏ¢ F4
-"ÏÔÊ¾/Òş²Ø¹¤¾ßÀ¸ F2
-"´úÂëÕÛµş <space>
-"ÕûÀíjs <leader>ff
-"easy motion£¨¿ìËÙ¶¨Î»£©<leader<leader>w /¶¨Î»µ½Ö¸¶¨×Ö·û <leader>leader>f<char>
+"æ·»åŠ ç‰ˆæƒä¿¡æ¯ F4
+"æ˜¾ç¤º/éšè—å·¥å…·æ  F2
+"ä»£ç æŠ˜å  <space>
+"æ•´ç†js <leader>ff
+"easy motionï¼ˆå¿«é€Ÿå®šä½ï¼‰<leader<leader>w /å®šä½åˆ°æŒ‡å®šå­—ç¬¦ <leader>leader>f<char>
 "Ctrl + s to save 
 nmap <C-s> :w<CR>
 "Shift + w to exit
 nmap <S-w> :q<CR>
-"¿ìËÙ±à¼­µ±Ç°ÎÄ¼şËùÔÚÂ·¾¶ÏÂµÄ¸÷ÎÄ¼ş ,e
+"å¿«é€Ÿç¼–è¾‘å½“å‰æ–‡ä»¶æ‰€åœ¨è·¯å¾„ä¸‹çš„å„æ–‡ä»¶ ,e
 
 "Set mapleader
 let mapleader = ","
-"Fast reloading of the .vimrc/ .gvimrc
-map <silent> <leader>ss :source ~/.vimrc<cr>
-map <silent> <leader>sg :source ~/.gvimrc<cr>
-"Fast editing of .vimrc/ .gvimrc
-map <silent> <leader>vv :e ~/.vimrc<cr>
-map <silent> <leader>vg :e ~/.gvimrc<cr>
-"When .vimrc is edited, reload it
-autocmd! bufwritepost .vimrc source ~/.vimrc 
+if has("unix")
+        "Fast reloading of the .vimrc/ .gvimrc
+        map <silent> <leader>ss :source ~/.vimrc<cr>
+        map <silent> <leader>sg :source ~/.gvimrc<cr>
+        "Fast editing of .vimrc/ .gvimrc
+        map <silent> <leader>vv :e ~/.vimrc<cr>
+        map <silent> <leader>vg :e ~/.gvimrc<cr>
+        "When .vimrc/.gvimrc is edited, reload it
+        autocmd! bufwritepost .vimrc source ~/.vimrc 
+        autocmd! bufwritepost .gvimrc source ~/.gvimrc
+else
+        "Fast reloading of the _vimrc/ _gvimrc
+        map <silent> <leader>ss :source $VIM/_vimrc<cr>
+        map <silent> <leader>sg :source $VIM/_gvimrc<cr>
+        "Fast editing of _vimrc/ _gvimrc
+        map <silent> <leader>vv :e $VIM/_vimrc<cr>
+        map <silent> <leader>vg :e $VIM/_gvimrc<cr>
+        "When _vimrc/ _gvimrc is edited, reload it
+        autocmd! bufwritepost _vimrc source $VIM/_vimrc 
+        autocmd! bufwritepost _gvimrc source $VIM/_gvimrc
+endif
 
-"ÓÃ¿Õ¸ñ¼üÀ´¿ª¹Ø´úÂëÕÛµş
+"ç”¨ç©ºæ ¼é”®æ¥å¼€å…³ä»£ç æŠ˜å 
 "set foldenable
 "set foldmethod=indent
 "nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 
-if(has("win32") || has("win95") || has("win64") || has("win16")) "ÅĞ¶¨µ±Ç°²Ù×÷ÏµÍ³ÀàĞÍ
+if(has("win32") || has("win95") || has("win64") || has("win16")) "åˆ¤å®šå½“å‰æ“ä½œç³»ç»Ÿç±»å‹
     let g:iswindows=1
 else
     let g:iswindows=0
@@ -48,10 +61,10 @@ if(g:iswindows==1)
         behave mswin
 endif
 autocmd BufEnter * lcd %:p:h
-set nocompatible "²»ÒªvimÄ£·ÂviÄ£Ê½£¬½¨ÒéÉèÖÃ£¬·ñÔò»áÓĞºÜ¶à²»¼æÈİµÄÎÊÌâ
-syntax on"´ò¿ª¸ßÁÁ
+set nocompatible "ä¸è¦vimæ¨¡ä»¿viæ¨¡å¼ï¼Œå»ºè®®è®¾ç½®ï¼Œå¦åˆ™ä¼šæœ‰å¾ˆå¤šä¸å…¼å®¹çš„é—®é¢˜
+syntax on"æ‰“å¼€é«˜äº®
 if has("autocmd")
-    filetype plugin indent on "¸ù¾İÎÄ¼ş½øĞĞËõ½ø
+    filetype plugin indent on "æ ¹æ®æ–‡ä»¶è¿›è¡Œç¼©è¿›
     augroup vimrcEx
         au!
         autocmd FileType text setlocal textwidth=78
@@ -61,17 +74,17 @@ if has("autocmd")
                     \ endif
     augroup END
 else
-    "ÖÇÄÜËõ½ø£¬ÏàÓ¦µÄÓĞcindent£¬¹Ù·½Ëµautoindent¿ÉÒÔÖ§³Ö¸÷ÖÖÎÄ¼şµÄËõ½ø£¬µ«ÊÇĞ§¹û»á±ÈÖ»Ö§³ÖC/C++µÄcindentĞ§¹û»á²îÒ»µã£¬µ«±ÊÕß²¢Ã»ÓĞ¿´³öÀ´
+    "æ™ºèƒ½ç¼©è¿›ï¼Œç›¸åº”çš„æœ‰cindentï¼Œå®˜æ–¹è¯´autoindentå¯ä»¥æ”¯æŒå„ç§æ–‡ä»¶çš„ç¼©è¿›ï¼Œä½†æ˜¯æ•ˆæœä¼šæ¯”åªæ”¯æŒC/C++çš„cindentæ•ˆæœä¼šå·®ä¸€ç‚¹ï¼Œä½†ç¬”è€…å¹¶æ²¡æœ‰çœ‹å‡ºæ¥
     set autoindent " always set autoindenting on 
 endif " has("autocmd")
-set tabstop=4 "ÈÃÒ»¸ötabµÈÓÚ4¸ö¿Õ¸ñ
+set tabstop=4 "è®©ä¸€ä¸ªtabç­‰äº4ä¸ªç©ºæ ¼
 set vb t_vb=
-set nowrap "²»×Ô¶¯»»ĞĞ
-set hlsearch "¸ßÁÁÏÔÊ¾½á¹û
-set incsearch "ÔÚÊäÈëÒªËÑË÷µÄÎÄ×ÖÊ±£¬vim»áÊµÊ±Æ¥Åä
-set backspace=indent,eol,start whichwrap+=<,>,[,] "ÔÊĞíÍË¸ñ¼üµÄÊ¹ÓÃ
-if(g:iswindows==1) "ÔÊĞíÊó±êµÄÊ¹ÓÃ
-    "·ÀÖ¹linuxÖÕ¶ËÏÂÎŞ·¨¿½±´
+set nowrap "ä¸è‡ªåŠ¨æ¢è¡Œ
+set hlsearch "é«˜äº®æ˜¾ç¤ºç»“æœ
+set incsearch "åœ¨è¾“å…¥è¦æœç´¢çš„æ–‡å­—æ—¶ï¼Œvimä¼šå®æ—¶åŒ¹é…
+set backspace=indent,eol,start whichwrap+=<,>,[,] "å…è®¸é€€æ ¼é”®çš„ä½¿ç”¨
+if(g:iswindows==1) "å…è®¸é¼ æ ‡çš„ä½¿ç”¨
+    "é˜²æ­¢linuxç»ˆç«¯ä¸‹æ— æ³•æ‹·è´
     if has('mouse')
         set mouse=a
     endif
@@ -84,16 +97,16 @@ filetype indent on
 set langmenu=en_US
 let $LANG='en_US'
 
-"¹Ø±ÕÃùÉùÌáÊ¾
+"å…³é—­é¸£å£°æç¤º
 set noerrorbells
 set novisualbell
 
-set nu"ÏÔÊ¾ĞĞºÅ
-set guitablabel=%N.%t "¸øtab¼ÓÉÏĞòºÅ
+set nu"æ˜¾ç¤ºè¡Œå·
+set guitablabel=%N.%t "ç»™tabåŠ ä¸Šåºå·
 
-"ÅäÉ«
+"é…è‰²
 "colorscheme twilight
-"set t_Co=256"ÖÕ¶ËÅäÉ«¼æÈİÉèÖÃ
+"set t_Co=256"ç»ˆç«¯é…è‰²å…¼å®¹è®¾ç½®
 colorscheme solarized
 let g:solarized_termcolors=256
 "let g:solarized_visibility = "high"
@@ -105,7 +118,7 @@ endif
 
 au BufRead,BufNewFile *.js set syntax=jquery
 
-"ÖĞÎÄ±àÂë
+"ä¸­æ–‡ç¼–ç 
 set encoding=utf-8
 ""GBK
 "set fenc=cp936
@@ -123,9 +136,9 @@ if v:lang =~? '^\(zh\)\|\(ja\)\|\(ko\)'
 endif
 set nobomb
 
-"×ÖÌåµÄÉèÖÃ
-set guifont=Bitstream_Vera_Sans_Mono_for_Po:h11:cANSI"¼Ç×¡¿Õ¸ñÓÃÏÂ»®Ïß´úÌæÅ¶
-set gfw=Ó×Ô²:h11.5:cGB2312
+"å­—ä½“çš„è®¾ç½®
+set guifont=Bitstream_Vera_Sans_Mono_for_Po:h11:cANSI"è®°ä½ç©ºæ ¼ç”¨ä¸‹åˆ’çº¿ä»£æ›¿å“¦
+set gfw=å¹¼åœ†:h11.5:cGB2312
 
 """""""""""Gvim
 "Toggle Menu and Toolbar
@@ -140,18 +153,18 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
     \endif<CR>
 
 
-winpos 285 100"´°¿ÚÆô¶¯Î»ÖÃ
-"colo peachpuff"±¾É«·½°¸
+winpos 285 100"çª—å£å¯åŠ¨ä½ç½®
+"colo peachpuff"æœ¬è‰²æ–¹æ¡ˆ
 """""""""""Gvim
 
-"¿ìËÙ±à¼­µ±Ç°ÎÄ¼şËùÔÚÂ·¾¶ÏÂµÄ¸÷ÎÄ¼ş
+"å¿«é€Ÿç¼–è¾‘å½“å‰æ–‡ä»¶æ‰€åœ¨è·¯å¾„ä¸‹çš„å„æ–‡ä»¶
 if(g:iswindows==1)
         map <leader>e :e <C-R>=expand("%:p:h") . "\\" <CR>
 else
         map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 endif
 
-"µ÷ÕûcscopeºÍctagsµÄ¼æÈİĞÔ
+"è°ƒæ•´cscopeå’Œctagsçš„å…¼å®¹æ€§
 if has("cscope")
         set cscopequickfix=s-,c-,d-,i-,t-,e-
         set csto=0
@@ -225,15 +238,15 @@ function Do_CsTag()
     endif
 endfunction
 
-"½øĞĞTlistµÄÉèÖÃ
-"TlistUpdate¿ÉÒÔ¸üĞÂtags
-map <F3> :silent! Tlist<CR> "°´ÏÂF3¾Í¿ÉÒÔºô³öÁË
-let Tlist_Ctags_Cmd='ctags' "ÒòÎªÎÒÃÇ·ÅÔÚ»·¾³±äÁ¿Àï£¬ËùÒÔ¿ÉÒÔÖ±½ÓÖ´ĞĞ
-let Tlist_Use_Right_Window=0 "1ÈÃ´°¿ÚÏÔÊ¾ÔÚÓÒ±ß£¬0µÄ»°¾ÍÊÇÏÔÊ¾ÔÚ×ó±ß
-let Tlist_Show_One_File=0 "ÈÃtaglist¿ÉÒÔÍ¬Ê±Õ¹Ê¾¶à¸öÎÄ¼şµÄº¯ÊıÁĞ±í£¬Èç¹ûÏëÖ»ÓĞ1¸ö£¬ÉèÖÃÎª1
-let Tlist_File_Fold_Auto_Close=1 "·Çµ±Ç°ÎÄ¼ş£¬º¯ÊıÁĞ±íÕÛµşÒş²Ø
-let Tlist_Exit_OnlyWindow=1 "µ±taglistÊÇ×îºóÒ»¸ö·Ö¸î´°¿ÚÊ±£¬×Ô¶¯ÍÆ³övim
-let Tlist_Process_File_Always=0 "ÊÇ·ñÒ»Ö±´¦Àítags.1:´¦Àí;0:²»´¦Àí¡£²»ÊÇÒ»Ö±ÊµÊ±¸üĞÂtags£¬ÒòÎªÃ»ÓĞ±ØÒª
+"è¿›è¡ŒTlistçš„è®¾ç½®
+"TlistUpdateå¯ä»¥æ›´æ–°tags
+map <F3> :silent! Tlist<CR> "æŒ‰ä¸‹F3å°±å¯ä»¥å‘¼å‡ºäº†
+let Tlist_Ctags_Cmd='ctags' "å› ä¸ºæˆ‘ä»¬æ”¾åœ¨ç¯å¢ƒå˜é‡é‡Œï¼Œæ‰€ä»¥å¯ä»¥ç›´æ¥æ‰§è¡Œ
+let Tlist_Use_Right_Window=0 "1è®©çª—å£æ˜¾ç¤ºåœ¨å³è¾¹ï¼Œ0çš„è¯å°±æ˜¯æ˜¾ç¤ºåœ¨å·¦è¾¹
+let Tlist_Show_One_File=0 "è®©taglistå¯ä»¥åŒæ—¶å±•ç¤ºå¤šä¸ªæ–‡ä»¶çš„å‡½æ•°åˆ—è¡¨ï¼Œå¦‚æœæƒ³åªæœ‰1ä¸ªï¼Œè®¾ç½®ä¸º1
+let Tlist_File_Fold_Auto_Close=1 "éå½“å‰æ–‡ä»¶ï¼Œå‡½æ•°åˆ—è¡¨æŠ˜å éšè—
+let Tlist_Exit_OnlyWindow=1 "å½“taglistæ˜¯æœ€åä¸€ä¸ªåˆ†å‰²çª—å£æ—¶ï¼Œè‡ªåŠ¨æ¨å‡ºvim
+let Tlist_Process_File_Always=0 "æ˜¯å¦ä¸€ç›´å¤„ç†tags.1:å¤„ç†;0:ä¸å¤„ç†ã€‚ä¸æ˜¯ä¸€ç›´å®æ—¶æ›´æ–°tagsï¼Œå› ä¸ºæ²¡æœ‰å¿…è¦
 let Tlist_Inc_Winwidth=0
 
 "Ctags.vim
@@ -242,7 +255,7 @@ let generate_tags=1
 let g:ctags_title=1
 
 "omnicppcomplete
-set completeopt=menu "²»ÏÔÊ¾ÏêÏ¸ĞÅÏ¢
+set completeopt=menu "ä¸æ˜¾ç¤ºè¯¦ç»†ä¿¡æ¯
 let OmniCpp_ClobalScopeSearch=1
 let OmniCpp_NamespaceSearch=1   " 0 ,  1 or 2  
 let OmniCpp_DisplayMode=1  
@@ -254,10 +267,10 @@ let OmniCpp_MayCompleteArrow=1
 let OmniCpp_MayCompleteScope=1
 
 "NERD_commenter
-"let NERDShutUp=1 "¹â±êËùÔÚĞĞÉÏ£¬°´ÏÂÒ»´Îctrl+hÊÇ×¢ÊÍ£¬ÔÙ°´ÏÂÒ»´ÎÊÇÈ¡Ïû×¢ÊÍ
-		 "ÄÚ½¨µÄÖ¸Áî 
-		 ",cm ÊÇ¶àĞĞ×¢ÊÍ£¬ÀàËÆC++µÄ/**/
-		 ",cuÊÇÈ¡Ïû×¢ÊÍ
+"let NERDShutUp=1 "å…‰æ ‡æ‰€åœ¨è¡Œä¸Šï¼ŒæŒ‰ä¸‹ä¸€æ¬¡ctrl+hæ˜¯æ³¨é‡Šï¼Œå†æŒ‰ä¸‹ä¸€æ¬¡æ˜¯å–æ¶ˆæ³¨é‡Š
+		 "å†…å»ºçš„æŒ‡ä»¤ 
+		 ",cm æ˜¯å¤šè¡Œæ³¨é‡Šï¼Œç±»ä¼¼C++çš„/**/
+		 ",cuæ˜¯å–æ¶ˆæ³¨é‡Š
 		 
 "DoxygenToolkit
 "map fg : Dox<cr>
@@ -270,7 +283,7 @@ let OmniCpp_MayCompleteScope=1
 "let g:DoxygenToolkit_briefTag_funcName = "no"
 "let g:DoxygenToolkit_maxFunctionProtoLines = 30
 
-"Indent Guides(¶ÔÆëÏß)
+"Indent Guides(å¯¹é½çº¿)
 let g:indent_guides_guide_size=1
 
 "powerline
@@ -281,8 +294,8 @@ let g:Powerline_symbols = 'fancy'
 set laststatus=2
 
 
-"²é¿´Ò»ÏÂÄ³¼¸ĞĞµÄ×Ö·ûÊÇ·ñÔÚÍ¬Ò»ÁĞÉÏ
-map ,ch :call SetColorColumn()<CR>"°´ÏÂ,ch ¾Í¿ÉÒÔ½«µ±Ç°¹â±êÏÂµÄÁĞ¸ßÁÁ£¬ÔÙ°´ÏÂÒ»´Î£¬È¡Ïû¸ßÁÁ£»²¢ÇÒ¿ÉÒÔÍ¬Ê±¶àÁĞ¸ßÁÁ
+"æŸ¥çœ‹ä¸€ä¸‹æŸå‡ è¡Œçš„å­—ç¬¦æ˜¯å¦åœ¨åŒä¸€åˆ—ä¸Š
+map ,ch :call SetColorColumn()<CR>"æŒ‰ä¸‹,ch å°±å¯ä»¥å°†å½“å‰å…‰æ ‡ä¸‹çš„åˆ—é«˜äº®ï¼Œå†æŒ‰ä¸‹ä¸€æ¬¡ï¼Œå–æ¶ˆé«˜äº®ï¼›å¹¶ä¸”å¯ä»¥åŒæ—¶å¤šåˆ—é«˜äº®
 function! SetColorColumn()
     let col_num = virtcol(".")
     let cc_list = split(&cc, ',')
@@ -300,7 +313,7 @@ if(g:iswindows==1)
 endif
 set grepprg=grep\ -nH\ $*
 
-"µ¥¸öÎÄ¼ş±àÒë
+"å•ä¸ªæ–‡ä»¶ç¼–è¯‘
 map <F5> :call Do_OneFileMake()<CR>
 function Do_OneFileMake()
     if expand("%:p:h")!=getcwd()
@@ -363,7 +376,7 @@ function Do_OneFileMake()
     endif
     execute "copen"
 endfunction
-"½øĞĞmakeµÄÉèÖÃ
+"è¿›è¡Œmakeçš„è®¾ç½®
 map <F6> :call Do_make()<CR>
 map <c-F6> :silent make clean<CR>
 function Do_make()
@@ -374,8 +387,8 @@ endfunction
 
 
 
-"½øĞĞ°æÈ¨ÉùÃ÷µÄÉèÖÃ
-"Ìí¼Ó»ò¸üĞÂÍ·
+"è¿›è¡Œç‰ˆæƒå£°æ˜çš„è®¾ç½®
+"æ·»åŠ æˆ–æ›´æ–°å¤´
 "map <F4> :call TitleDet()<cr>'s
 "function AddTitle()
 "    call append(0,"/*=============================================================================")
@@ -391,7 +404,7 @@ endfunction
 "    call append(10,"=============================================================================*/")
 "    echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
 "endf
-""¸üĞÂ×î½üĞŞ¸ÄÊ±¼äºÍÎÄ¼şÃû
+""æ›´æ–°æœ€è¿‘ä¿®æ”¹æ—¶é—´å’Œæ–‡ä»¶å
 "function UpdateTitle()
 "    normal m'
 "    execute '/# *Last modified:/s@:.*$@\=strftime(":\t%Y-%m-%d %H:%M")@'
@@ -402,12 +415,12 @@ endfunction
 "    normal 'k
 "    echohl WarningMsg | echo "Successful in updating the copy right." | echohl None
 "endfunction
-""ÅĞ¶ÏÇ°10ĞĞ´úÂëÀïÃæ£¬ÊÇ·ñÓĞLast modifiedÕâ¸öµ¥´Ê£¬
-""Èç¹ûÃ»ÓĞµÄ»°£¬´ú±íÃ»ÓĞÌí¼Ó¹ı×÷ÕßĞÅÏ¢£¬ĞèÒªĞÂÌí¼Ó£»
-""Èç¹ûÓĞµÄ»°£¬ÄÇÃ´Ö»ĞèÒª¸üĞÂ¼´¿É
+""åˆ¤æ–­å‰10è¡Œä»£ç é‡Œé¢ï¼Œæ˜¯å¦æœ‰Last modifiedè¿™ä¸ªå•è¯ï¼Œ
+""å¦‚æœæ²¡æœ‰çš„è¯ï¼Œä»£è¡¨æ²¡æœ‰æ·»åŠ è¿‡ä½œè€…ä¿¡æ¯ï¼Œéœ€è¦æ–°æ·»åŠ ï¼›
+""å¦‚æœæœ‰çš„è¯ï¼Œé‚£ä¹ˆåªéœ€è¦æ›´æ–°å³å¯
 "function TitleDet()
 "    let n=1
-"    "Ä¬ÈÏÎªÌí¼Ó
+"    "é»˜è®¤ä¸ºæ·»åŠ 
 "    while n < 10
 "        let line = getline(n)
 "        if line =~ '^\#\s*\S*Last\smodified:\S*.*$'
@@ -418,7 +431,7 @@ endfunction
 "    endwhile
 "    call AddTitle()
 "endfunction
-""""""""""""""""ÒÔÉÏÃüÁîÏÖÓÉAutorInfoÌæ´ú£¬¿ÉÖ§³Ö¸ü¶àÓïÑÔ
+""""""""""""""""ä»¥ä¸Šå‘½ä»¤ç°ç”±AutorInfoæ›¿ä»£ï¼Œå¯æ”¯æŒæ›´å¤šè¯­è¨€
 let g:vimrc_author='wenLiangcan'
 let g:vimrc_email='wenLiangcan@gmail.com'
 "let g:vimrc_homepage=''
