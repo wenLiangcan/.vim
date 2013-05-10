@@ -293,6 +293,13 @@ set t_Co=256
 let g:Powerline_symbols = 'fancy'
 set laststatus=2
 
+"VIMIM
+let g:vimim_map='c-space'"开关输入法
+let g:vimim_punctuation=0"不使用中文标点
+"let g:vimim_toggle='pinyin,google,sogou,baidu'
+let g:vimim_shuangpin='flypy'"双拼方案为小鹤
+let g:vimim_cloud='qq.shuangpin.flypy'"云输入
+let g:vimim_mycloud=0
 
 "查看一下某几行的字符是否在同一列上
 map ,ch :call SetColorColumn()<CR>"按下,ch 就可以将当前光标下的列高亮，再按下一次，取消高亮；并且可以同时多列高亮
