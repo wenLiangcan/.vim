@@ -304,7 +304,8 @@ let g:vimim_map='c-space'"开关输入法
 let g:vimim_punctuation=0"不使用中文标点
 "let g:vimim_toggle='pinyin,google,sogou,baidu'
 let g:vimim_shuangpin='flypy'"双拼方案为小鹤
-let g:vimim_cloud='qq.shuangpin.flypy'"云输入
+"let g:vimim_cloud='qq.shuangpin.flypy'"云输入
+let g:vimim_cloud=0
 let g:vimim_mycloud=0
 
 "查看一下某几行的字符是否在同一列上
