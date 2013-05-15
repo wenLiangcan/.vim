@@ -27,6 +27,7 @@ autocmd! bufwritepost .gvimrc source ~/.gvimrc
 
 set lines=30 columns=90"窗口大小
 set guioptions-=r "隐藏右侧滚动条
+set guioptions-=L "隐藏垂直分割窗口下的左侧滚动条
 
 " {{{ Win平台下窗口全屏组件 gvimfullscreen.dll
 " F11 全屏切换
