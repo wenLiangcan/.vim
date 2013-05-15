@@ -93,6 +93,7 @@ if(g:iswindows==1) "允许鼠标的使用
 endif
 
 filetype indent on
+filetype on
 
 "set the menu and the message to English
 set langmenu=en_US
@@ -112,26 +113,26 @@ set guitablabel=%N.%t "给tab加上序号
 
 "配色
 "colorscheme twilight
-"set t_Co=256"终端配色兼容设置
+set t_Co=256"终端配色兼容设置
 colorscheme solarized
 let g:solarized_termcolors=256
 "let g:solarized_visibility = "high"
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
+"if has('gui_running')
+"    set background=light
+"else
+"    set background=dark
+"endif
 
 au BufRead,BufNewFile *.js set syntax=jquery
 
 "中文编码
 set encoding=utf-8
 ""GBK
-"set fenc=cp936
-"set fileencodings=cp936,ucs-bom,utf-8
-""UTF-8 
-set fenc=utf-8
-set fileencodings=ucs-bom,utf-8,cp936
+set fenc=cp936
+set fileencodings=cp936,ucs-bom,utf-8
+"UTF-8 
+"set fenc=utf-8
+"set fileencodings=ucs-bom,utf-8,cp936
 if(g:iswindows==1)
 		    source $VIMRUNTIME/delmenu.vim
 			    source $VIMRUNTIME/menu.vim
@@ -248,7 +249,7 @@ endfunction
 "TlistUpdate可以更新tags
 map <F3> :silent! Tlist<CR> "按下F3就可以呼出了
 let Tlist_Ctags_Cmd='ctags' "因为我们放在环境变量里，所以可以直接执行
-let Tlist_Use_Right_Window=0 "1让窗口显示在右边，0的话就是显示在左边
+let Tlist_Use_Right_Window=1 "1让窗口显示在右边，0的话就是显示在左边
 let Tlist_Show_One_File=0 "让taglist可以同时展示多个文件的函数列表，如果想只有1个，设置为1
 let Tlist_File_Fold_Auto_Close=1 "非当前文件，函数列表折叠隐藏
 let Tlist_Exit_OnlyWindow=1 "当taglist是最后一个分割窗口时，自动推出vim
@@ -263,7 +264,7 @@ let g:ctags_title=1
 "omnicppcomplete
 set completeopt=menu "不显示详细信息
 let OmniCpp_ClobalScopeSearch=1
-let OmniCpp_NamespaceSearch=1   " 0 ,  1 or 2  
+let OmniCpp_NamespaceSearch=2   " 0 ,  1 or 2  
 let OmniCpp_DisplayMode=1  
 let OmniCpp_ShowScopeInAbbr=0  
 let OmniCpp_ShowPrototypeInAbbr=1  
@@ -271,6 +272,7 @@ let OmniCpp_ShowAccess=1
 let OmniCpp_MayCompleteDot=1  
 let OmniCpp_MayCompleteArrow=1  
 let OmniCpp_MayCompleteScope=1
+let OmniCpp_SelectFirstItem=2
 
 "NERD_commenter
 "let NERDShutUp=1 "光标所在行上，按下一次ctrl+h是注释，再按下一次是取消注释
