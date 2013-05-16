@@ -248,7 +248,11 @@ endfunction
 "进行Tlist的设置
 "TlistUpdate可以更新tags
 map <F3> :silent! Tlist<CR> "按下F3就可以呼出了
-let Tlist_Ctags_Cmd='ctags' "因为我们放在环境变量里，所以可以直接执行
+if (g:iswindows == 1)
+		let Tlist_Ctags_Cmd='ctags' "因为我们放在环境变量里，所以可以直接执行
+else
+		let Tlist_Ctags_Cmd='/usr/bin/ctags'
+endif
 let Tlist_Use_Right_Window=1 "1让窗口显示在右边，0的话就是显示在左边
 let Tlist_Show_One_File=0 "让taglist可以同时展示多个文件的函数列表，如果想只有1个，设置为1
 let Tlist_File_Fold_Auto_Close=1 "非当前文件，函数列表折叠隐藏
@@ -273,6 +277,19 @@ let OmniCpp_MayCompleteDot=1
 let OmniCpp_MayCompleteArrow=1  
 let OmniCpp_MayCompleteScope=1
 let OmniCpp_SelectFirstItem=2
+
+"delimitMate
+au FileType mail let b:delimitMate_autoclose=0
+
+"Syntastic
+"let g:syntastic_check_on_open=1"自动检测
+"let g:syntastic_mode_map = {'mode': 'passive',
+"						\ 'active_filetypes': ['python', 'c', 'cpp', 'tcl', 'lua', 'sh']}"passive + active_filetypes = whitelist
+"let g:syntastic_stl_fromat = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w} $%t]'"信息栏显示设定
+"let g:syntastic_python_checker = ['pep8']
+"let g:syntastic_c_checker = ['gcc']
+"let g:syntastic_cpp_checker = ['gcc']
+
 
 "NERD_commenter
 "let NERDShutUp=1 "光标所在行上，按下一次ctrl+h是注释，再按下一次是取消注释
