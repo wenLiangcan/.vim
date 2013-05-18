@@ -28,6 +28,8 @@ nmap <S-w> :q<CR>
 
 "Set mapleader
 let mapleader = ","
+
+"配置文件编辑
 if has("unix")
         "Fast reloading of the .vimrc/ .gvimrc
         map <silent> <leader>ss :source ~/.vimrc<cr>
@@ -50,10 +52,8 @@ else
         autocmd! bufwritepost _gvimrc source $VIM/_gvimrc
 endif
 
-"用空格键来开关代码折叠
-"set foldenable
-"set foldmethod=indent
-"nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+
+""""""""""""""""基础设定""""""""""""""""
 
 if(has("win32") || has("win95") || has("win64") || has("win16")) "判定当前操作系统类型
     let g:iswindows=1
@@ -66,6 +66,8 @@ endif
 autocmd BufEnter * lcd %:p:h
 set nocompatible "不要vim模仿vi模式，建议设置，否则会有很多不兼容的问题
 syntax on"打开高亮
+filetype indent on
+filetype on
 if has("autocmd")
     filetype plugin indent on "根据文件进行缩进
     augroup vimrcEx
@@ -94,40 +96,15 @@ if(g:iswindows==1) "允许鼠标的使用
     au GUIEnter * simalt ~x
 endif
 
-filetype indent on
-filetype on
-
-"set the menu and the message to English
-set langmenu=en_US
-let $LANG='en_US'
-
-"设置默认显示中文帮助文档
-if version >= 603
-		set helplang=cn
-endif
-
 "关闭鸣声提示
 "set noerrorbells
 "set novisualbell
 set noeb vb t_vb=
 au GUIEnter * set vb t_vb=
 
-set nu"显示行号
-set guitablabel=%N.%t "给tab加上序号
-
-"配色
-"colorscheme twilight
-set t_Co=256"终端配色兼容设置
-colorscheme solarized
-let g:solarized_termcolors=256
-"let g:solarized_visibility = "high"
-"if has('gui_running')
-"    set background=light
-"else
-"    set background=dark
-"endif
-
-au BufRead,BufNewFile *.js set syntax=jquery
+"set the menu and the message to English
+set langmenu=en_US
+let $LANG='en_US'
 
 "中文编码
 set encoding=utf-8
@@ -151,22 +128,36 @@ set nobomb
 set guifont=Bitstream_Vera_Sans_Mono_for_Po:h11:cANSI"记住空格用下划线代替哦
 set gfw=幼圆:h11.5:cGB2312
 
-"""""""""""Gvim
-"Toggle Menu and Toolbar
-set guioptions-=m
-set guioptions-=T
-map <silent> <F2> :if &guioptions =~# 'T' <Bar>
-        \set guioptions-=T <Bar>
-        \set guioptions-=m <bar>
-    \else <Bar>
-        \set guioptions+=T <Bar>
-        \set guioptions+=m <Bar>
-    \endif<CR>
+"设置默认显示中文帮助文档
+if version >= 603
+		set helplang=cn
+endif
+
+set nu"显示行号
+set guitablabel=%N.%t "给tab加上序号
+
+"配色
+"colorscheme twilight
+set t_Co=256"终端配色兼容设置
+colorscheme solarized
+let g:solarized_termcolors=256
+"let g:solarized_visibility = "high"
+"if has('gui_running')
+"    set background=light
+"else
+"    set background=dark
+"endif
+
+au BufRead,BufNewFile *.js set syntax=jquery
+
+""""""""""""""""基础设定""""""""""""""""
 
 
-winpos 285 100"窗口启动位置
-"colo peachpuff"本色方案
-"""""""""""Gvim
+
+
+
+
+""""""""""""""""额外功能""""""""""""""""
 
 "快速编辑当前文件所在路径下的各文件
 if(g:iswindows==1)
@@ -175,6 +166,24 @@ else
         map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 endif
 
+"用空格键来开关代码折叠
+"set foldenable
+"set foldmethod=indent
+"nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+
+"查看一下某几行的字符是否在同一列上
+map ,ch :call SetColorColumn()<CR>"按下,ch 就可以将当前光标下的列高亮，再按下一次，取消高亮；并且可以同时多列高亮
+function! SetColorColumn()
+    let col_num = virtcol(".")
+    let cc_list = split(&cc, ',')
+    if count(cc_list, string(col_num)) <= 0
+        execute "set cc+=".col_num
+    else
+        execute "set cc-=".col_num
+    endif
+endfunction
+
+"IDE
 "调整cscope和ctags的兼容性
 if has("cscope")
         set cscopequickfix=s-,c-,d-,i-,t-,e-
@@ -183,7 +192,7 @@ if has("cscope")
         set csverb
 endif
 
-"IDE
+"为 c/cpp 文件生成tag
 map <F12> :call Do_CsTag()<CR>
 nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>:copen<CR>
 nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
@@ -248,128 +257,6 @@ function Do_CsTag()
         endif
     endif
 endfunction
-
-"进行Tlist的设置
-"TlistUpdate可以更新tags
-map <F3> :silent! Tlist<CR> "按下F3就可以呼出了
-if (g:iswindows == 1)
-		let Tlist_Ctags_Cmd='ctags' "因为我们放在环境变量里，所以可以直接执行
-else
-		let Tlist_Ctags_Cmd='/usr/bin/ctags'
-endif
-let Tlist_Use_Right_Window=1 "1让窗口显示在右边，0的话就是显示在左边
-let Tlist_Show_One_File=0 "让taglist可以同时展示多个文件的函数列表，如果想只有1个，设置为1
-let Tlist_File_Fold_Auto_Close=1 "非当前文件，函数列表折叠隐藏
-let Tlist_Exit_OnlyWindow=1 "当taglist是最后一个分割窗口时，自动推出vim
-let Tlist_Process_File_Always=0 "是否一直处理tags.1:处理;0:不处理。不是一直实时更新tags，因为没有必要
-let Tlist_Inc_Winwidth=0
-
-"Ctags.vim
-let g:ctags_statusline=1
-let generate_tags=1
-let g:ctags_title=1
-
-"winmanager
-"map <c-w><c-f> :FirstExplorerWindow<cr> 
-"map <c-w><c-b> :BottomExplorerWindow<cr> 
-"map <c-w><c-t> :WMToggle<cr>
-let g:winManagerWidth =25
-let g:AutoOpenWinManager =1
-"let g:persistentBehaviour = 0"当winmanager是最后一个分割窗口时，自动退出vim
-"用winmanager集成合并显示NERDTree和TagList 
-"let g:winManagerWindowLayout='NERDTree|TagList'
-let g:winManagerWindowLayout='NERDTree|BufExplorer'
-let g:NERDTree_title='NERD Tree'
-let bufExplorerMaxHeight=30
-function! NERDTree_Start()
-    exec 'NERDTree'
-endfunction
-function! NERDTree_IsValid()
-    return 1
-endfunction
-nmap <F9> :WMToggle<cr>:q<cr>
-nmap <C-F9> :WMToggle<cr>
-
-"omnicppcomplete
-set completeopt=menu "不显示详细信息
-let OmniCpp_ClobalScopeSearch=1
-let OmniCpp_NamespaceSearch=2   " 0 ,  1 or 2  
-let OmniCpp_DisplayMode=1  
-let OmniCpp_ShowScopeInAbbr=0  
-let OmniCpp_ShowPrototypeInAbbr=1  
-let OmniCpp_ShowAccess=1  
-let OmniCpp_MayCompleteDot=1  
-let OmniCpp_MayCompleteArrow=1  
-let OmniCpp_MayCompleteScope=1
-let OmniCpp_SelectFirstItem=2
-
-"delimitMate
-au FileType mail let b:delimitMate_autoclose=0
-
-"Syntastic
-"let g:syntastic_check_on_open=1"自动检测
-"let g:syntastic_mode_map = {'mode': 'passive',
-"						\ 'active_filetypes': ['python', 'c', 'cpp', 'tcl', 'lua', 'sh']}"passive + active_filetypes = whitelist
-"let g:syntastic_stl_fromat = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w} $%t]'"信息栏显示设定
-"let g:syntastic_python_checker = ['pep8']
-"let g:syntastic_c_checker = ['gcc']
-"let g:syntastic_cpp_checker = ['gcc']
-
-
-"NERD_commenter
-"let NERDShutUp=1 "光标所在行上，按下一次ctrl+h是注释，再按下一次是取消注释
-		 "内建的指令 
-		 ",cm 是多行注释，类似C++的/**/
-		 ",cu是取消注释
-		 
-"DoxygenToolkit
-"map fg : Dox<cr>
-"let g:DoxygenToolkit_authorName="wenLiangcan"
-"let g:DoxygenToolkit_licenseTag="My own license\<enter>"
-"let g:DoxygenToolkit_undocTag="DOXIGEN_SKIP_BLOCK"
-"let g:DoxygenToolkit_briefTag_pre = "@brief\t"
-"let g:DoxygenToolkit_paramTag_pre = "@param\t"
-"let g:DoxygenToolkit_returnTag = "@return\t"
-"let g:DoxygenToolkit_briefTag_funcName = "no"
-"let g:DoxygenToolkit_maxFunctionProtoLines = 30
-
-"Indent Guides(对齐线)
-let g:indent_guides_guide_size=1
-
-"powerline
-"set guifont=PowerlineSymbols\ for\ Powerline
-set nocompatible
-set t_Co=256
-let g:Powerline_symbols = 'fancy'
-set laststatus=2
-
-"VIMIM
-let g:vimim_map='c-space'"开关输入法
-let g:vimim_punctuation=0"不使用中文标点
-"let g:vimim_toggle='pinyin,google,sogou,baidu'
-let g:vimim_shuangpin='flypy'"双拼方案为小鹤
-"let g:vimim_cloud='qq.shuangpin.flypy'"云输入
-let g:vimim_cloud=0
-let g:vimim_mycloud=0
-
-"查看一下某几行的字符是否在同一列上
-map ,ch :call SetColorColumn()<CR>"按下,ch 就可以将当前光标下的列高亮，再按下一次，取消高亮；并且可以同时多列高亮
-function! SetColorColumn()
-    let col_num = virtcol(".")
-    let cc_list = split(&cc, ',')
-    if count(cc_list, string(col_num)) <= 0
-        execute "set cc+=".col_num
-    else
-        execute "set cc-=".col_num
-    endif
-endfunction
-
-"latex-suite
-filetype plugin on
-if(g:iswindows==1)
-        set shellslash
-endif
-set grepprg=grep\ -nH\ $*
 
 "单个文件编译
 map <F5> :call Do_OneFileMake()<CR>
@@ -443,54 +330,128 @@ function Do_make()
     execute "copen"
 endfunction
 
+""""""""""""""""额外功能""""""""""""""""
 
 
-"进行版权声明的设置
-"添加或更新头
-"map <F4> :call TitleDet()<cr>'s
-"function AddTitle()
-"    call append(0,"/*=============================================================================")
-"    call append(1,"#")
-"    call append(2,"# Author: wenLiangcan - wenLiangcan@gmail.com")
-"    call append(3,"#")
-"    call append(4,"# Last modified: ".strftime("%Y-%m-%d %H:%M"))
-"    call append(5,"#")
-"    call append(6,"# Filename: ".expand("%:t"))
-"    call append(7,"#")
-"    call append(8,"# Description: ")
-"    call append(9,"#")
-"    call append(10,"=============================================================================*/")
-"    echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
-"endf
-""更新最近修改时间和文件名
-"function UpdateTitle()
-"    normal m'
-"    execute '/# *Last modified:/s@:.*$@\=strftime(":\t%Y-%m-%d %H:%M")@'
-"    normal ''
-"    normal mk
-"    execute '/# *Filename:/s@:.*$@\=":\t\t".expand("%:t")@'
-"    execute "noh"
-"    normal 'k
-"    echohl WarningMsg | echo "Successful in updating the copy right." | echohl None
-"endfunction
-""判断前10行代码里面，是否有Last modified这个单词，
-""如果没有的话，代表没有添加过作者信息，需要新添加；
-""如果有的话，那么只需要更新即可
-"function TitleDet()
-"    let n=1
-"    "默认为添加
-"    while n < 10
-"        let line = getline(n)
-"        if line =~ '^\#\s*\S*Last\smodified:\S*.*$'
-"            call UpdateTitle()
-"            return
-"        endif
-"        let n = n + 1
-"    endwhile
-"    call AddTitle()
-"endfunction
-""""""""""""""""以上命令现由AutorInfo替代，可支持更多语言
+
+
+
+
+""""""""""""""""插件设定""""""""""""""""
+
+"进行Tlist的设置
+"TlistUpdate可以更新tags
+map <F3> :silent! Tlist<CR> "按下F3就可以呼出了
+if (g:iswindows == 1)
+		let Tlist_Ctags_Cmd='ctags' "因为我们放在环境变量里，所以可以直接执行
+else
+		let Tlist_Ctags_Cmd='/usr/bin/ctags'
+endif
+let Tlist_Use_Right_Window=1 "1让窗口显示在右边，0的话就是显示在左边
+let Tlist_Show_One_File=0 "让taglist可以同时展示多个文件的函数列表，如果想只有1个，设置为1
+let Tlist_File_Fold_Auto_Close=1 "非当前文件，函数列表折叠隐藏
+let Tlist_Exit_OnlyWindow=1 "当taglist是最后一个分割窗口时，自动推出vim
+let Tlist_Process_File_Always=0 "是否一直处理tags.1:处理;0:不处理。不是一直实时更新tags，因为没有必要
+let Tlist_Inc_Winwidth=0
+
+"Ctags.vim
+let g:ctags_statusline=1
+let generate_tags=1
+let g:ctags_title=1
+
+"winmanager
+"map <c-w><c-f> :FirstExplorerWindow<cr> 
+"map <c-w><c-b> :BottomExplorerWindow<cr> 
+"map <c-w><c-t> :WMToggle<cr>
+let g:winManagerWidth =25
+let g:AutoOpenWinManager =1
+"let g:persistentBehaviour = 0"当winmanager是最后一个分割窗口时，自动退出vim
+"用winmanager集成合并显示NERDTree和TagList 
+"let g:winManagerWindowLayout='NERDTree|TagList'
+let g:winManagerWindowLayout='NERDTree|BufExplorer'
+let g:NERDTree_title='NERD Tree'
+let bufExplorerMaxHeight=30
+function! NERDTree_Start()
+    exec 'NERDTree'
+endfunction
+function! NERDTree_IsValid()
+    return 1
+endfunction
+nmap <F9> :WMToggle<cr>:q<cr>
+nmap <C-F9> :WMToggle<cr>
+
+"omnicppcomplete
+set completeopt=menu "不显示详细信息
+let OmniCpp_ClobalScopeSearch=1
+let OmniCpp_NamespaceSearch=2   " 0 ,  1 or 2  
+let OmniCpp_DisplayMode=1  
+let OmniCpp_ShowScopeInAbbr=0  
+let OmniCpp_ShowPrototypeInAbbr=1  
+let OmniCpp_ShowAccess=1  
+let OmniCpp_MayCompleteDot=1  
+let OmniCpp_MayCompleteArrow=1  
+let OmniCpp_MayCompleteScope=1
+let OmniCpp_SelectFirstItem=2
+
+"delimitMate
+au FileType mail let b:delimitMate_autoclose=0
+
+"Syntastic
+"let g:syntastic_check_on_open=1"自动检测
+"let g:syntastic_mode_map = {'mode': 'passive',
+"						\ 'active_filetypes': ['python', 'c', 'cpp', 'tcl', 'lua', 'sh']}"passive + active_filetypes = whitelist
+"let g:syntastic_stl_fromat = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w} $%t]'"信息栏显示设定
+"let g:syntastic_python_checker = ['pep8']
+"let g:syntastic_c_checker = ['gcc']
+"let g:syntastic_cpp_checker = ['gcc']
+
+"NERD_commenter
+"let NERDShutUp=1 "光标所在行上，按下一次ctrl+h是注释，再按下一次是取消注释
+		 "内建的指令 
+		 ",cm 是多行注释，类似C++的/**/
+		 ",cu是取消注释
+		 
+"DoxygenToolkit
+"map fg : Dox<cr>
+"let g:DoxygenToolkit_authorName="wenLiangcan"
+"let g:DoxygenToolkit_licenseTag="My own license\<enter>"
+"let g:DoxygenToolkit_undocTag="DOXIGEN_SKIP_BLOCK"
+"let g:DoxygenToolkit_briefTag_pre = "@brief\t"
+"let g:DoxygenToolkit_paramTag_pre = "@param\t"
+"let g:DoxygenToolkit_returnTag = "@return\t"
+"let g:DoxygenToolkit_briefTag_funcName = "no"
+"let g:DoxygenToolkit_maxFunctionProtoLines = 30
+
+"Indent Guides(对齐线)
+let g:indent_guides_guide_size=1
+
+"powerline
+"set guifont=PowerlineSymbols\ for\ Powerline
+set nocompatible
+set t_Co=256
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
+
+"VIMIM
+let g:vimim_map='c-space'"开关输入法
+let g:vimim_punctuation=0"不使用中文标点
+"let g:vimim_toggle='pinyin,google,sogou,baidu'
+let g:vimim_shuangpin='flypy'"双拼方案为小鹤
+"let g:vimim_cloud='qq.shuangpin.flypy'"云输入
+let g:vimim_cloud=0
+let g:vimim_mycloud=0
+
+"latex-suite
+filetype plugin on
+if(g:iswindows==1)
+        set shellslash
+endif
+set grepprg=grep\ -nH\ $*
+
+"AuthorInfo
 let g:vimrc_author='wenLiangcan'
 let g:vimrc_email='wenLiangcan@gmail.com'
 "let g:vimrc_homepage=''
 nmap <F4> :AuthorInfoDetect<cr>
+
+""""""""""""""""插件设定""""""""""""""""
