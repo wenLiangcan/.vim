@@ -9,6 +9,8 @@ call pathogen#helptags()
 "重载配置文件 ,ss(gvim为 ,sg
 "生成tag文件 F12
 "呼出Tlist F3
+"呼出winmanager F9
+"关闭winmanager ctrl + F9
 "查看多行字符对齐 ,ch
 "一键编译 F5
 "make F6
@@ -105,8 +107,10 @@ if version >= 603
 endif
 
 "关闭鸣声提示
-set noerrorbells
-set novisualbell
+"set noerrorbells
+"set novisualbell
+set noeb vb t_vb=
+au GUIEnter * set vb t_vb=
 
 set nu"显示行号
 set guitablabel=%N.%t "给tab加上序号
@@ -264,6 +268,27 @@ let Tlist_Inc_Winwidth=0
 let g:ctags_statusline=1
 let generate_tags=1
 let g:ctags_title=1
+
+"winmanager
+"map <c-w><c-f> :FirstExplorerWindow<cr> 
+"map <c-w><c-b> :BottomExplorerWindow<cr> 
+"map <c-w><c-t> :WMToggle<cr>
+let g:winManagerWidth =25
+let g:AutoOpenWinManager =1
+"let g:persistentBehaviour = 0"当winmanager是最后一个分割窗口时，自动退出vim
+"用winmanager集成合并显示NERDTree和TagList 
+"let g:winManagerWindowLayout='NERDTree|TagList'
+let g:winManagerWindowLayout='NERDTree|BufExplorer'
+let g:NERDTree_title='NERD Tree'
+let bufExplorerMaxHeight=30
+function! NERDTree_Start()
+    exec 'NERDTree'
+endfunction
+function! NERDTree_IsValid()
+    return 1
+endfunction
+nmap <F9> :WMToggle<cr>:q<cr>
+nmap <C-F9> :WMToggle<cr>
 
 "omnicppcomplete
 set completeopt=menu "不显示详细信息
