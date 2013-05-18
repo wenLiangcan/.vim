@@ -21,7 +21,6 @@
 "配色
 "colorscheme github_c
 
-"""""""""""Gvim
 "Toggle Menu and Toolbar
 set guioptions-=m
 set guioptions-=T
@@ -36,7 +35,7 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
 
 winpos 285 100"窗口启动位置
 "colo peachpuff"本色方案
-"""""""""""Gvim
+
 set lines=30 columns=90"窗口大小
 set guioptions-=r "隐藏右侧滚动条
 set guioptions-=L "隐藏垂直分割窗口下的左侧滚动条
