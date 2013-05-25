@@ -406,7 +406,8 @@ au FileType mail let b:delimitMate_autoclose=0
 "let g:syntastic_cpp_checker = ['gcc']
 
 "NERD_commenter
-"let NERDShutUp=1 "光标所在行上，按下一次ctrl+h是注释，再按下一次是取消注释
+"let loaded_nerd_comments=1 "关闭NERD_commenter
+let NERDShutUp=1 "光标所在行上，按下一次ctrl+h是注释，再按下一次是取消注释
 		 "内建的指令 
 		 ",cm 是多行注释，类似C++的/**/
 		 ",cu是取消注释
