@@ -149,6 +149,9 @@ let g:solarized_termcolors=256
 "endif
 
 au BufRead,BufNewFile *.js set syntax=jquery
+"对c和c++,使用openmp时,输入#后不自动顶格
+au BufRead,BufNewFile *.c set cinkeys-=0#
+au BufRead,BufNewFile *.cpp set cinkeys-=0#
 
 """"""""""""""""基础设定""""""""""""""""
 
