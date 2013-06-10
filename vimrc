@@ -148,10 +148,13 @@ let g:solarized_termcolors=256
 "    set background=dark
 "endif
 
+"按Ctrl+Enter，回车并缩进一个tab
+inoremap <C-Return> <CR><CR><C-o>k<Tab><Tab>
+
 au BufRead,BufNewFile *.js set syntax=jquery
 "对c和c++,使用openmp时,输入#后不自动顶格
-au BufRead,BufNewFile *.c set cinkeys-=0#
-au BufRead,BufNewFile *.cpp set cinkeys-=0#
+"au BufRead,BufNewFile *.c set cinkeys-=0#
+"au BufRead,BufNewFile *.cpp set cinkeys-=0#
 
 """"""""""""""""基础设定""""""""""""""""
 
