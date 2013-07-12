@@ -76,3 +76,6 @@
 [submodule "bundle/machit"]
 	path = bundle/machit
 	url = https://github.com/vim-scripts/matchit.zip.git
+[submodule "bundle/vim-multiple-cursors"]
+	path = bundle/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git

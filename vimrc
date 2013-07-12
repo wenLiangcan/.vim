@@ -461,4 +461,18 @@ let g:vimrc_email='wenLiangcan@gmail.com'
 "let g:vimrc_homepage=''
 nmap <F4> :AuthorInfoDetect<cr>
 
+"ZenCoding
+let g:user_zen_settings = {
+						\ 'php' : {
+						\ 'extends' : 'html',
+						\ 'filters' : 'c',
+						\},
+						\ 'xml' : {
+						\ 'extends' : 'html',
+						\},
+						\ 'haml' : {
+						\ 'extends' : 'html',
+						\}
+						\}
+
 """"""""""""""""²å¼þÉè¶¨""""""""""""""""
