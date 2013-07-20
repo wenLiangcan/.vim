@@ -145,7 +145,7 @@ let g:solarized_termcolors=256
 "if has('gui_running')
 "    set background=light
 "else
-"    set background=dark
+    set background=dark
 "endif
 
 "按Ctrl+Enter，回车并缩进一个tab
