@@ -126,7 +126,12 @@ set nobomb
 
 "字体的设置
 set guifont=Bitstream_Vera_Sans_Mono_for_Po:h11:cANSI"记住空格用下划线代替哦
-set gfw=幼圆:h11.5:cGB2312
+if(g:iswindows==1)
+		set gfw=幼圆:h11.5:cGB2312
+endif
+if(g:iswindows==0)
+		set gfw=YouYuan:h11.5:cGB2312
+endif
 
 "设置默认显示中文帮助文档
 if version >= 603
@@ -155,6 +160,11 @@ au BufRead,BufNewFile *.js set syntax=jquery
 "对c和c++,使用openmp时,输入#后不自动顶格
 "au BufRead,BufNewFile *.c set cinkeys-=0#
 "au BufRead,BufNewFile *.cpp set cinkeys-=0#
+
+"Python
+autocmd filetype python setlocal et sta sw=4 sts=4
+autocmd filetype python setlocal foldmethod=indent
+set foldlevel=99
 
 """"""""""""""""基础设定""""""""""""""""
 
