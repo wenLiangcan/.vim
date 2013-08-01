@@ -79,3 +79,6 @@
 [submodule "bundle/vim-multiple-cursors"]
 	path = bundle/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "bundle/xmledit"]
+	path = bundle/xmledit
+	url = https://github.com/vim-scripts/xmledit.git
