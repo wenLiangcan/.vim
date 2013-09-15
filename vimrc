@@ -125,12 +125,12 @@ endif
 set nobomb
 
 "字体的设置
-set guifont=Bitstream_Vera_Sans_Mono_for_Po:h11:cANSI"记住空格用下划线代替哦
+set guifont=Bitstream_Vera_Sans_Mono_for_Po:h13:cANSI"记住空格用下划线代替哦
 if(g:iswindows==1)
-		set gfw=幼圆:h11.5:cGB2312
+		set gfw=幼圆:h13.5:cGB2312
 endif
 if(g:iswindows==0)
-		set gfw=YouYuan:h11.5:cGB2312
+		set gfw=YouYuan:h13.5:cGB2312
 endif
 
 "设置默认显示中文帮助文档
