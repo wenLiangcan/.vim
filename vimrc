@@ -130,7 +130,7 @@ if(g:iswindows==1)
 		set gfw=幼圆:h13.5:cGB2312
 endif
 if(g:iswindows==0)
-		set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline\ 12"记住空格用下划线代替哦
+		set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline\ 12
 		set gfw=YouYuan\ 11.5
 endif
 
