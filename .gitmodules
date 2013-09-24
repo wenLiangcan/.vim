@@ -55,9 +55,6 @@
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
-[submodule "bundle/delimitMate"]
-	path = bundle/delimitMate
-	url = https://github.com/Raimondi/delimitMate.git
 [submodule "bundle/winmanager"]
 	path = bundle/winmanager
 	url = https://github.com/vim-scripts/winmanager.git
@@ -85,3 +82,6 @@
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
+[submodule "bundle/vim-vala"]
+	path = bundle/vim-vala
+	url = https://github.com/taurenchieftain/vim-vala.git
