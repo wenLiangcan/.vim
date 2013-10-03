@@ -85,3 +85,6 @@
 [submodule "bundle/vim-vala"]
 	path = bundle/vim-vala
 	url = https://github.com/taurenchieftain/vim-vala.git
+[submodule "bundle/MarkdownView"]
+	path = bundle/MarkdownView
+	url = https://github.com/jiazhoulvke/MarkdownView.git
