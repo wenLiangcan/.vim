@@ -88,3 +88,6 @@
 [submodule "bundle/MarkdownView"]
 	path = bundle/MarkdownView
 	url = https://github.com/jiazhoulvke/MarkdownView.git
+[submodule "bundle/conque-term"]
+	path = bundle/conque-term
+	url = https://github.com/rosenfeld/conque-term.git
