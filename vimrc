@@ -146,7 +146,7 @@ set guitablabel=%N.%t "给tab加上序号
 "colorscheme twilight
 set t_Co=256"终端配色兼容设置
 colorscheme solarized
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
 "let g:solarized_visibility = "high"
 "if has('gui_running')
 "    set background=light
