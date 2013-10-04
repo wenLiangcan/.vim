@@ -91,3 +91,6 @@
 [submodule "bundle/conque-term"]
 	path = bundle/conque-term
 	url = https://github.com/rosenfeld/conque-term.git
+[submodule "bundle/a_vim"]
+	path = bundle/a_vim
+	url = https://github.com/vim-scripts/a.vim.git
