@@ -65,6 +65,11 @@ if(g:iswindows==1)
 endif
 autocmd BufEnter * lcd %:p:h
 set nocompatible "不要vim模仿vi模式，建议设置，否则会有很多不兼容的问题
+filetype off
+filetype plugin indent off
+if(g:iswindows==0)
+		set runtimepath+=/usr/share/go/misc/vim
+endif
 syntax on"打开高亮
 filetype indent on
 filetype on
@@ -131,7 +136,8 @@ if(g:iswindows==1)
 endif
 if(g:iswindows==0)
 		set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline\ 12
-		set gfw=YouYuan\ 11.5
+		"set gfw=YouYuan\ 11.5
+		set gfw=Microsoft\ YaHei\ Mono\ 11.5
 endif
 
 "设置默认显示中文帮助文档
