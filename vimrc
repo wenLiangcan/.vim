@@ -173,6 +173,10 @@ autocmd filetype python setlocal et sta sw=4 sts=4
 autocmd filetype python setlocal foldmethod=indent
 set foldlevel=99
 
+"enable emmet for html/css
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
 """"""""""""""""»ù´¡Éè¶¨""""""""""""""""
 
 
