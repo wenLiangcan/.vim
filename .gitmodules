@@ -94,3 +94,6 @@
 [submodule "bundle/DoxygenToolkit"]
 	path = bundle/DoxygenToolkit
 	url = https://github.com/vim-scripts/DoxygenToolkit.vim.git
+[submodule "bundle/emmet-vim"]
+	path = bundle/emmet-vim
+	url = git@github.com:mattn/emmet-vim.git
