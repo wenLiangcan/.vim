@@ -89,7 +89,7 @@ else
 endif " has("autocmd")
 set tabstop=4 "让一个tab等于4个空格
 set vb t_vb=
-set nowrap "不自动换行
+"set nowrap "不自动换行
 set hlsearch "高亮显示结果
 set incsearch "在输入要搜索的文字时，vim会实时匹配
 set backspace=indent,eol,start whichwrap+=<,>,[,] "允许退格键的使用
