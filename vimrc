@@ -25,6 +25,9 @@ imap <C-s> <Esc>:w<CR>
 "Shift + w to exit
 nmap <S-w> :q<CR>
 "快速编辑当前文件所在路径下的各文件 ,e
+"next/previous buffer
+nmap [b :bp<CR>
+nmap ]b :bn<CR>
 
 "Set mapleader
 let mapleader = ","
