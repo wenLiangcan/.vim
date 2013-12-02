@@ -8,7 +8,7 @@ call pathogen#helptags()
 "编辑vim配置文件 ,vv(gvim为 ,vg
 "重载配置文件 ,ss(gvim为 ,sg
 "生成tag文件 F12
-"呼出Tlist F3
+"呼出Tagbar F3
 "呼出winmanager F9
 "关闭winmanager ctrl + F9
 "查看多行字符对齐 ,ch
@@ -368,23 +368,28 @@ endfunction
 
 "进行Tlist的设置
 "TlistUpdate可以更新tags
-map <F3> :silent! Tlist<CR> "按下F3就可以呼出了
-if (g:iswindows == 1)
-		let Tlist_Ctags_Cmd='ctags' "因为我们放在环境变量里，所以可以直接执行
-else
-		let Tlist_Ctags_Cmd='/usr/bin/ctags'
-endif
-let Tlist_Use_Right_Window=1 "1让窗口显示在右边，0的话就是显示在左边
-let Tlist_Show_One_File=0 "让taglist可以同时展示多个文件的函数列表，如果想只有1个，设置为1
-let Tlist_File_Fold_Auto_Close=1 "非当前文件，函数列表折叠隐藏
-let Tlist_Exit_OnlyWindow=1 "当taglist是最后一个分割窗口时，自动推出vim
-let Tlist_Process_File_Always=0 "是否一直处理tags.1:处理;0:不处理。不是一直实时更新tags，因为没有必要
-let Tlist_Inc_Winwidth=0
+"map <F3> :silent! Tlist<CR> "按下F3就可以呼出了
+"if (g:iswindows == 1)
+		"let Tlist_Ctags_Cmd='ctags' "因为我们放在环境变量里，所以可以直接执行
+"else
+		"let Tlist_Ctags_Cmd='/usr/bin/ctags'
+"endif
+"let Tlist_Use_Right_Window=1 "1让窗口显示在右边，0的话就是显示在左边
+"let Tlist_Show_One_File=0 "让taglist可以同时展示多个文件的函数列表，如果想只有1个，设置为1
+"let Tlist_File_Fold_Auto_Close=1 "非当前文件，函数列表折叠隐藏
+"let Tlist_Exit_OnlyWindow=1 "当taglist是最后一个分割窗口时，自动推出vim
+"let Tlist_Process_File_Always=0 "是否一直处理tags.1:处理;0:不处理。不是一直实时更新tags，因为没有必要
+"let Tlist_Inc_Winwidth=0
 
 "Ctags.vim
 let g:ctags_statusline=1
 let generate_tags=1
 let g:ctags_title=1
+
+"tagbar
+nmap <F3> :TagbarToggle<CR>
+let g:tagbar_width=28
+let g:tagbar_autopreview=0
 
 "winmanager
 "map <c-w><c-f> :FirstExplorerWindow<cr> 
