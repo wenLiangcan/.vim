@@ -40,9 +40,9 @@ if has("unix")
         "Fast editing of .vimrc/ .gvimrc
         map <silent> <leader>vv :e ~/.vimrc<cr>
         map <silent> <leader>vg :e ~/.gvimrc<cr>
-        "When .vimrc/.gvimrc is edited, reload it
-        autocmd! bufwritepost .vimrc source ~/.vimrc 
-        autocmd! bufwritepost .gvimrc source ~/.gvimrc
+        "When .vimrc/.gvimrc is edited, reload itt
+        autocmd! bufwritepost .vimrc source ~/.vimrc source ~/.vimrc
+        autocmd! bufwritepost .gvimrc source ~/.gvimrc source ~/.gvimrc
 else
         "Fast reloading of the _vimrc/ _gvimrc
         map <silent> <leader>ss :source $VIM/_vimrc<cr>
@@ -51,8 +51,8 @@ else
         map <silent> <leader>vv :e $VIM/_vimrc<cr>
         map <silent> <leader>vg :e $VIM/_gvimrc<cr>
         "When _vimrc/ _gvimrc is edited, reload it
-        autocmd! bufwritepost _vimrc source $VIM/_vimrc 
-        autocmd! bufwritepost _gvimrc source $VIM/_gvimrc
+        autocmd! bufwritepost _vimrc source $VIM/_vimrc source $VIM/_vimrc
+        autocmd! bufwritepost _gvimrc source $VIM/_gvimrc source $VIM/_gvimrc
 endif
 
 
