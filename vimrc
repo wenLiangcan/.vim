@@ -394,6 +394,9 @@ nmap <F3> :TagbarToggle<CR>
 let g:tagbar_width=28
 let g:tagbar_autopreview=0
 
+"ZoomWin
+nmap <leader>zw :ZoomWin<CR>
+
 "winmanager
 "map <c-w><c-f> :FirstExplorerWindow<cr> 
 "map <c-w><c-b> :BottomExplorerWindow<cr> 
