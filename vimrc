@@ -28,6 +28,8 @@ nmap <S-w> :q<CR>
 "next/previous buffer
 nmap [b :bp<CR>
 nmap ]b :bn<CR>
+"Gundo
+"<leader>g
 
 "Set mapleader
 let mapleader = ","
@@ -396,6 +398,9 @@ let g:tagbar_autopreview=0
 
 "ZoomWin
 nmap <leader>zw :ZoomWin<CR>
+
+"Gundo
+map <leader>g :GundoToggle<CR>
 
 "winmanager
 "map <c-w><c-f> :FirstExplorerWindow<cr> 
