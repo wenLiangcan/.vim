@@ -30,6 +30,10 @@ nmap [b :bp<CR>
 nmap ]b :bn<CR>
 "Gundo
 "<leader>g
+"VirtaulEnv
+"Deactivate the current virtualen <leader>pd
+"List all virtualenvs <leader>pl
+"To activate a virtualenv <leader>pa
 
 "Set mapleader
 let mapleader = ","
@@ -401,6 +405,11 @@ nmap <leader>zw :ZoomWin<CR>
 
 "Gundo
 map <leader>g :GundoToggle<CR>
+
+"vim-virtualenv
+map <leader>pd :VirtaulEnvDeactivate<CR>
+map <leader>pl :VirtualEnvList<CR>
+map <leader>pa :VirtualEnvActivate
 
 "winmanager
 "map <c-w><c-f> :FirstExplorerWindow<cr> 
