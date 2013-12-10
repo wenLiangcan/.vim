@@ -112,3 +112,6 @@
 [submodule "bundle/fcitx.vim"]
 	path = bundle/fcitx.vim
 	url = https://github.com/lilydjwg/fcitx.vim.git
+[submodule "bundle/vim-gocode"]
+	path = bundle/vim-gocode
+	url = https://github.com/Blackrush/vim-gocode.git
