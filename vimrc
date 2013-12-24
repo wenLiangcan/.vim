@@ -173,6 +173,7 @@ colorscheme solarized
 inoremap <C-Return> <CR><CR><C-o>k<Tab><Tab>
 
 au BufRead,BufNewFile *.js set syntax=jquery
+au BufRead,BufNewFile *.js set foldmethod=indent
 "对c和c++,使用openmp时,输入#后不自动顶格
 "au BufRead,BufNewFile *.c set cinkeys-=0#
 "au BufRead,BufNewFile *.cpp set cinkeys-=0#
