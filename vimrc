@@ -96,7 +96,7 @@ else
     "智能缩进，相应的有cindent，官方说autoindent可以支持各种文件的缩进，但是效果会比只支持C/C++的cindent效果会差一点，但笔者并没有看出来
     set autoindent " always set autoindenting on 
 endif " has("autocmd")
-set tabstop=4 "让一个tab等于4个空格
+set tabstop=4 shiftwidth=4 expandtab "让一个tab等于4个空格
 set vb t_vb=
 "set nowrap "不自动换行
 set hlsearch "高亮显示结果
