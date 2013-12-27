@@ -115,3 +115,6 @@
 [submodule "bundle/vim-gocode"]
 	path = bundle/vim-gocode
 	url = https://github.com/Blackrush/vim-gocode.git
+[submodule "bundle/vim-ctrlspace"]
+	path = bundle/vim-ctrlspace
+	url = https://github.com/szw/vim-ctrlspace.git
