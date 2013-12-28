@@ -403,6 +403,7 @@ let g:ctags_title=1
 nmap <F3> :TagbarToggle<CR>
 let g:tagbar_width=28
 let g:tagbar_autopreview=0
+let g:tagbar_sort=0
 
 "ZoomWin
 nmap <leader>zw :ZoomWin<CR>
