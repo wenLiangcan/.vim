@@ -118,6 +118,3 @@
 [submodule "bundle/vim-ctrlspace"]
 	path = bundle/vim-ctrlspace
 	url = https://github.com/szw/vim-ctrlspace.git
-[submodule "bundle/gotags"]
-	path = bundle/gotags
-	url = https://github.com/jstemmer/gotags.git
