@@ -123,11 +123,11 @@ let $LANG='en_US'
 "ÖÐÎÄ±àÂë
 set encoding=utf-8
 ""GBK
-set fenc=cp936
-set fileencodings=cp936,ucs-bom,utf-8
-"UTF-8 
-"set fenc=utf-8
-"set fileencodings=ucs-bom,utf-8,cp936
+"set fenc=cp936
+"set fileencodings=cp936,ucs-bom,utf-8
+""UTF-8 
+set fenc=utf-8
+set fileencodings=ucs-bom,utf-8,cp936
 if(g:iswindows==1)
 		    source $VIMRUNTIME/delmenu.vim
 			    source $VIMRUNTIME/menu.vim
