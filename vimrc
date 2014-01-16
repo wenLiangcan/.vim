@@ -37,6 +37,13 @@ inoremap <c-s> <Esc>:Update<CR>
 """return to insert mode after the save
 "inoremap <c-s> <c-o>:Update<CR>
 
+"Copy / Paste
+vnoremap <silent> <C-c> "+y
+if has("gui_running")
+    nnoremap <silent> <C-v> "+p
+    inoremap <C-v> <Esc>"+p
+endif
+
 "Shift + w to exit
 nmap <S-w> :q<CR>
 "快速编辑当前文件所在路径下的各文件 ,e

@@ -17,10 +17,6 @@
 "加大窗口透明度 Shift + y 
 "切换Vim是否总在最前面显示 Shift + r 
 
-"copy / paste
-map <C-c> "+y
-map <C-v> "+p
-
 "配色
 "colorscheme github_c
 
