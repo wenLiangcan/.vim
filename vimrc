@@ -19,9 +19,24 @@ call pathogen#helptags()
 "代码折叠 <space>
 "整理js <leader>ff
 "easy motion（快速定位）<leader<leader>w /定位到指定字符 <leader>leader>f<char>
-"Ctrl + s to save 
-nmap <C-s> :w<CR>
-imap <C-s> <Esc>:w<CR>
+
+"""Ctrl + s to save 
+"nmap <C-s> :w<CR>
+"imap <C-s> <Esc>:w<CR>
+"" If the current buffer has never been saved, it will have no name,
+" call the file browser to save it, otherwise just save it.
+command -nargs=0 -bar Update if &modified 
+                           \|    if empty(bufname('%')) && has('gui_running')
+                           \|        browse confirm write
+                           \|    else
+                           \|        confirm write
+                           \|    endif
+                           \|endif
+nnoremap <silent> <C-S> :<C-u>Update<CR>
+inoremap <c-s> <Esc>:Update<CR>
+"""return to insert mode after the save
+"inoremap <c-s> <c-o>:Update<CR>
+
 "Shift + w to exit
 nmap <S-w> :q<CR>
 "快速编辑当前文件所在路径下的各文件 ,e
