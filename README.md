@@ -1,10 +1,8 @@
-非原创       
-          
 Installation:
 
         git clone git@github.com:wenLiangcan/.vim.git
                
-Creat symlinks:
+~~Creat symlinks:~~
 
         ln -s ~/.vim/vimrc ~/.vimrc
         ln -s ~/.vim/gvimrc ~/.gvimrc
