@@ -192,7 +192,7 @@ colorscheme solarized
 "endif
 
 "按Ctrl+Enter，回车并缩进一个tab
-inoremap <C-Return> <CR><CR><C-o>k<Tab><Tab>
+inoremap <C-Return> <CR><CR><C-o>k<Tab>
 
 au BufRead,BufNewFile *.js set syntax=jquery
 au BufRead,BufNewFile *.js set foldmethod=indent
