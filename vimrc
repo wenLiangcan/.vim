@@ -62,15 +62,15 @@ let mapleader = ","
 
 "≈‰÷√Œƒº˛±‡º≠
 if has("unix")
-        "Fast reloading of the .vimrc/ .gvimrc
-        map <silent> <leader>ss :source ~/.vimrc<cr>
-        map <silent> <leader>sg :source ~/.gvimrc<cr>
-        "Fast editing of .vimrc/ .gvimrc
-        map <silent> <leader>vv :e ~/.vimrc<cr>
-        map <silent> <leader>vg :e ~/.gvimrc<cr>
-        "When .vimrc/.gvimrc is edited, reload itt
-        autocmd! bufwritepost .vimrc source ~/.vimrc source ~/.vimrc
-        autocmd! bufwritepost .gvimrc source ~/.gvimrc source ~/.gvimrc
+        "Fast reloading of the vimrc/gvimrc
+        map <silent> <leader>ss :source ~/.vim/vimrc<cr>
+        map <silent> <leader>sg :source ~/.vim/gvimrc<cr>
+        "Fast editing of vimrc/gvimrc
+        map <silent> <leader>vv :e ~/.vim/vimrc<cr>
+        map <silent> <leader>vg :e ~/.vim/gvimrc<cr>
+        "When vimrc/gvimrc is edited, reload it
+        autocmd! bufwritepost vimrc source "~/.vim/vimrc" source "~/.vim/vimrc"
+        autocmd! bufwritepost gvimrc source "~/.vim/gvimrc" source "~/.vim/gvimrc"
 else
         "Fast reloading of the _vimrc/ _gvimrc
         map <silent> <leader>ss :source $VIM/_vimrc<cr>
