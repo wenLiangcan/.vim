@@ -17,6 +17,7 @@ call pathogen#helptags()
 "添加版权信息 F4
 "显示/隐藏工具栏 F2
 "代码折叠 <space>
+"格式化 Javascript/HTML/CSS Ctrl + f
 "easy motion（快速定位）<leader<leader>w /定位到指定字符 <leader>leader>f<char>
 
 """Ctrl + s to save 
@@ -193,9 +194,15 @@ colorscheme solarized
 inoremap <C-Return> <CR><CR><C-o>k<Tab>
 
 "Javascript
-map <C-f> :call JsBeautify()<CR>
 au BufRead,BufNewFile *.js set syntax=jquery
 au BufRead,BufNewFile *.js set foldmethod=indent
+
+"Jsbeautify
+"map <C-f> :call JsBeautify()<CR>
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+"for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr> 
 
 "对c和c++,使用openmp时,输入#后不自动顶格
 "au BufRead,BufNewFile *.c set cinkeys-=0#

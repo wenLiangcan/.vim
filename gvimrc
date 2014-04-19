@@ -15,6 +15,7 @@
 "降低窗口透明度 Shift + t 
 "加大窗口透明度 Shift + y 
 "切换Vim是否总在最前面显示 Shift + r 
+"格式化 Javascript/HTML/CSS Ctrl + f
 
 "配色
 "colorscheme github_c
