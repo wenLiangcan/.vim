@@ -199,10 +199,10 @@ au BufRead,BufNewFile *.js set foldmethod=indent
 
 "Jsbeautify
 "map <C-f> :call JsBeautify()<CR>
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+autocmd FileType javascript noremap <buffer> <C-f> :call JsBeautify()<cr>
+autocmd FileType html,xhtml noremap <buffer> <C-f> :call HtmlBeautify()<cr>
 "for css or scss
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr> 
+autocmd FileType css noremap <buffer> <C-f> :call CSSBeautify()<cr> 
 
 "对c和c++,使用openmp时,输入#后不自动顶格
 "au BufRead,BufNewFile *.c set cinkeys-=0#
