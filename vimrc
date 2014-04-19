@@ -204,6 +204,24 @@ autocmd FileType html,xhtml noremap <buffer> <C-f> :call HtmlBeautify()<cr>
 "for css or scss
 autocmd FileType css noremap <buffer> <C-f> :call CSSBeautify()<cr> 
 
+"Jshint2
+let jshint2_save = 1 "Lint JavaScript files after saving it
+let jshint2_height = 12 "Set default height of error list
+" jshint validation
+"nnoremap <silent><F1> :JSHint<CR>
+"inoremap <silent><F1> <C-O>:JSHint<CR>
+"vnoremap <silent><F1> :JSHint<CR>
+
+" show next jshint error
+"nnoremap <silent><F2> :lnext<CR>
+"inoremap <silent><F2> <C-O>:lnext<CR>
+"vnoremap <silent><F2> :lnext<CR>
+
+" show previous jshint error
+"nnoremap <silent><F3> :lprevious<CR>
+"inoremap <silent><F3> <C-O>:lprevious<CR>
+"vnoremap <silent><F3> :lprevious<CR>
+
 "对c和c++,使用openmp时,输入#后不自动顶格
 "au BufRead,BufNewFile *.c set cinkeys-=0#
 "au BufRead,BufNewFile *.cpp set cinkeys-=0#
