@@ -17,7 +17,6 @@ call pathogen#helptags()
 "添加版权信息 F4
 "显示/隐藏工具栏 F2
 "代码折叠 <space>
-"整理js <leader>ff
 "easy motion（快速定位）<leader<leader>w /定位到指定字符 <leader>leader>f<char>
 
 """Ctrl + s to save 
