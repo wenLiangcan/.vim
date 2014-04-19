@@ -118,3 +118,6 @@
 [submodule "bundle/vim-ctrlspace"]
 	path = bundle/vim-ctrlspace
 	url = https://github.com/szw/vim-ctrlspace.git
+[submodule "bundle/vim-jsbeautify"]
+	path = bundle/vim-jsbeautify
+	url = https://github.com/maksimr/vim-jsbeautify.git
