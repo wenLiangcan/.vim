@@ -54,6 +54,7 @@ Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'vim-scripts/vimwiki'
 Plugin 'vim-scripts/winmanager'
 Plugin 'vim-scripts/xmledit'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/ZoomWin'
 
 
