@@ -1,7 +1,68 @@
 set nocp
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" alternatively, pass a path where Vundle should install plugins
+"let path = '~/some/path/here'
+"call vundle#rc(path)
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/vundle'
+
+" scripts on GitHub repos
+Plugin 'vim-scripts/ag.vim'
+Plugin 'vim-scripts/a.vim'
+Plugin 'vim-scripts/bufexplorer.zip'
+Plugin 'rosenfeld/conque-term'
+Plugin 'vim-scripts/DoxygenToolkit.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'lilydjwg/fcitx.vim'
+Plugin 'sjl/gundo.vim'
+Plugin 'vim-scripts/HTML-AutoCloseTag'
+Plugin 'vim-scripts/Indent-Guides'
+Plugin 'Shutnik/jshint2.vim'
+Plugin 'vim-scripts/LaTeX-Suite-aka-Vim-LaTeX'
+Plugin 'jiazhoulvke/MarkdownView'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'skammer/vim-css-color'
+Plugin 'szw/vim-ctrlspace'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'Blackrush/vim-gocode'
+Plugin 'vim-scripts/VimIM'
+Plugin 'vim-scripts/VimIRC.vim'
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'einars/js-beautify'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'wlangstroth/vim-racket'
+
+""snipmate
+Plugin 'tomtom/tlib_vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+
+Plugin 'taurenchieftain/vim-vala'
+Plugin 'jmcantrell/vim-virtualenv'
+Plugin 'vim-scripts/vimwiki'
+Plugin 'vim-scripts/winmanager'
+Plugin 'vim-scripts/xmledit'
+Plugin 'vim-scripts/ZoomWin'
+
+
+" scripts not on GitHub
+Plugin 'git://fedorapeople.org/home/fedora/wwoods/public_git/vim-scripts.git', {'name': 'vim-systemd'}
+
 
 """快捷键説明"""
-"leader键为,
+"leader键为,'
 "编辑vim配置文件 ,vv(gvim为 ,vg
 "重载配置文件 ,ss(gvim为 ,sg
 "生成tag文件 F12
