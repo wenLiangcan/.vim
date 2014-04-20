@@ -7,8 +7,6 @@ Installation:
         ln -s ~/.vim/vimrc ~/.vimrc
         ln -s ~/.vim/gvimrc ~/.gvimrc
 
-Switch to the '~/.vim' directory, and fetch submodules:
+Start VIM/GVIM and run the command:
 
-        cd ~/.vim
-        git submodule init
-        git submodule update
+        :PluginInstall
