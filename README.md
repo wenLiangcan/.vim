@@ -1,5 +1,6 @@
 Installation:
 
+        cd ~
         git clone git@github.com:wenLiangcan/.vim.git
 
 Install Vundle:
