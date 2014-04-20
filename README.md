@@ -1,11 +1,11 @@
 Installation:
 
         git clone git@github.com:wenLiangcan/.vim.git
-               
-~~Creat symlinks:~~
 
-        ln -s ~/.vim/vimrc ~/.vimrc
-        ln -s ~/.vim/gvimrc ~/.gvimrc
+Install Vundle:
+
+        cd ~/.vim
+        git clone https://github.com/gmarik/Vundle.vim.git bundle/vundle
 
 Start VIM/GVIM and run the command:
 
