@@ -47,7 +47,7 @@ Plugin 'wlangstroth/vim-racket'
 ""UltiSnips
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-"Handle all issues between YCM and UltiSnips
+"Handle all issues between YCM and UltiSnips via: http://stackoverflow.com/a/18685821/1436873
 function! g:UltiSnips_Complete()
     call UltiSnips#ExpandSnippet()
     if g:ulti_expand_res == 0
