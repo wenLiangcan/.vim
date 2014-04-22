@@ -1,21 +1,44 @@
 """快捷键説明"""
-"leader键为,
-"编辑vim配置文件 ,ee(gvim为 ,eg
-"重载配置文件 ,ss(gvim为 ,sg
-"生成tag文件 F12
-"呼出Tlist F3
-"查看多行字符对齐 ,ch
-"一键编译 F5
-"make F6
-"添加版权信息 F4
-"显示/隐藏工具栏 F2
-"代码折叠 <space>
-"easy motion（快速定位）<leader<leader>w /定位到指定字符 <leader>leader>f<char>
+"leader键为,'
+"回车并缩进一个tab: Ctrl+Enter
+"退出: Shift + w
+"next/previous buffer: ]b / [b
+"保存文件: Ctrl + s
+"Copy / Paste: Ctrl+p / Ctrl+v
+"编辑vim配置文件: ,vv(gvim为 ,vg
+"重载配置文件: ,ss(gvim为 ,sg
+"快速编辑当前文件所在路径下的各文件: ,e
+"查看多行字符对齐: ,ch
+
+"调用 Gundo: <leader>g
+"呼出 Tagbar: F3
+"格式化 Javascript/HTML/CSS: Ctrl + f
+
+"VirtaulEnv
+"Deactivate the current virtualen: <leader>pd
+"List all virtualenvs: <leader>pl
+"To activate a virtualenv: <leader>pa
+
+"呼出winmanager: F9
+"关闭winmanager: ctrl + F9
+
+"最大化当前分割窗口: Ctrl+w+o
+"easy motion:
+"           快速定位: <leader<leader>w
+"           定位到指定字符: <leader>leader>f<char>
+
+"显示/隐藏工具栏: F2
+"生成tag文件: F12
+"一键编译: F5
+"make: F6
+"添加版权信息: F4
+"代码折叠: <space>
+
 "全屏 F11
 "降低窗口透明度 Shift + t 
 "加大窗口透明度 Shift + y 
 "切换Vim是否总在最前面显示 Shift + r 
-"格式化 Javascript/HTML/CSS Ctrl + f
+
 
 "配色
 "colorscheme github_c
