@@ -81,6 +81,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Blackrush/vim-gocode'
 Plugin 'vim-scripts/VimIM'
 Plugin 'vim-scripts/VimIRC.vim'
+Plugin 'vim-scripts/jQuery'
 
 ""jsbeautify
 Plugin 'maksimr/vim-jsbeautify'
