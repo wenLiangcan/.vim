@@ -320,6 +320,9 @@ endfunction
 "Ragel
 au BufRead,BufNewFile *.rl set filetype=ragel
 
+"Markdown
+autocmd filetype pandoc setlocal spell spelllang=en_us
+
 """""""""""""""" Languages """"""""""""""""
 
 
