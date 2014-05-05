@@ -99,7 +99,6 @@ Plugin 'honza/vim-snippets'
 
 Plugin 'taurenchieftain/vim-vala'
 Plugin 'jmcantrell/vim-virtualenv'
-Plugin 'vim-scripts/vimwiki'
 Plugin 'vim-scripts/winmanager'
 Plugin 'vim-scripts/xmledit'
 Plugin 'Valloric/YouCompleteMe'
@@ -571,6 +570,7 @@ let g:tagbar_type_go = {
 \ }
 
 " Airline
+set laststatus=2
 let g:airline_detect_modified=1
 let g:airline_detect_paste=1
 
@@ -615,7 +615,6 @@ autocmd FileType css noremap <buffer> <C-f> :call CSSBeautify()<cr>
 "set guifont=PowerlineSymbols\ for\ Powerline
 "set t_Co=256
 "let g:Powerline_symbols = 'fancy'
-"set laststatus=2
 
 ""UltiSnips
 "Handle all issues between YCM and UltiSnips via: http://stackoverflow.com/a/18685821/1436873
