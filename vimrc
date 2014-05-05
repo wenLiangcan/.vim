@@ -80,7 +80,6 @@ Plugin 'skammer/vim-css-color'
 Plugin 'szw/vim-ctrlspace'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Blackrush/vim-gocode'
-Plugin 'vim-scripts/VimIM'
 Plugin 'vim-scripts/jQuery'
 
 ""jsbeautify
@@ -593,15 +592,6 @@ let g:airline#extensions#tabline#left_alt_sep = '⮁'
 
 let g:airline#extensions#tagbar#enabled = 1 " tagbar integration
 
-
-"VIMIM
-let g:vimim_map='c-space'"开关输入法
-let g:vimim_punctuation=0"不使用中文标点
-"let g:vimim_toggle='pinyin,google,sogou,baidu'
-let g:vimim_shuangpin='flypy'"双拼方案为小鹤
-"let g:vimim_cloud='qq.shuangpin.flypy'"云输入
-let g:vimim_cloud=0
-let g:vimim_mycloud=0
 
 "Jsbeautify
 "map <C-f> :call JsBeautify()<CR>
