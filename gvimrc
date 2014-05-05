@@ -35,9 +35,9 @@
 "代码折叠: <space>
 
 "全屏 F11
-"降低窗口透明度 Shift + t 
-"加大窗口透明度 Shift + y 
-"切换Vim是否总在最前面显示 Shift + r 
+"降低窗口透明度 Shift + t
+"加大窗口透明度 Shift + y
+"切换Vim是否总在最前面显示 Shift + r
 
 
 "配色
@@ -58,7 +58,7 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
 winpos 285 100"窗口启动位置
 "colo peachpuff"本色方案
 
-set lines=30 columns=86"窗口大小
+set lines=30 columns=96"窗口大小
 set guioptions-=r "隐藏右侧滚动条
 set guioptions-=L "隐藏垂直分割窗口下的左侧滚动条
 
