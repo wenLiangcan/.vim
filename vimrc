@@ -189,7 +189,7 @@ if(g:iswindows==0)
 endif
 
 set nu"显示行号
-set guitablabel=%N.%t "给tab加上序号
+"set guitablabel=%N.%t "给tab加上序号
 
 "配色
 set t_Co=256"终端配色兼容设置
@@ -587,6 +587,7 @@ let g:airline_symbols.linenr = '⭡'
 let g:airline#extensions#tabline#enabled = 1 " Automatically displays all buffers when there's only one tab open.
 let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline#extensions#tabline#show_tab_type = 1
+let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#tabline#left_sep = '⮀'
 let g:airline#extensions#tabline#left_alt_sep = '⮁'
 
