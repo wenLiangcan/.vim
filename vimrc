@@ -1,48 +1,48 @@
-"""¿ì½İ¼üÕhÃ÷"""
-"leader¼üÎª,'
-"»Ø³µ²¢Ëõ½øÒ»¸ötab: Ctrl+Enter
-"ÍË³ö: Shift + w
+"""å¿«æ·é”®èª¬æ˜"""
+"leaderé”®ä¸º,'
+"å›è½¦å¹¶ç¼©è¿›ä¸€ä¸ªtab: Ctrl+Enter
+"é€€å‡º: Shift + w
 "next/previous buffer: ]b / [b
-"±£´æÎÄ¼ş: Ctrl + s
+"ä¿å­˜æ–‡ä»¶: Ctrl + s
 "Copy / Paste: Ctrl+p / Ctrl+v
-"±à¼­vimÅäÖÃÎÄ¼ş: ,vv(gvimÎª ,vg
-"ÖØÔØÅäÖÃÎÄ¼ş: ,ss(gvimÎª ,sg
-"¿ìËÙ±à¼­µ±Ç°ÎÄ¼şËùÔÚÂ·¾¶ÏÂµÄ¸÷ÎÄ¼ş: ,e
-"²é¿´¶àĞĞ×Ö·û¶ÔÆë: ,ch
+"ç¼–è¾‘vimé…ç½®æ–‡ä»¶: ,vv(gvimä¸º ,vg
+"é‡è½½é…ç½®æ–‡ä»¶: ,ss(gvimä¸º ,sg
+"å¿«é€Ÿç¼–è¾‘å½“å‰æ–‡ä»¶æ‰€åœ¨è·¯å¾„ä¸‹çš„å„æ–‡ä»¶: ,e
+"æŸ¥çœ‹å¤šè¡Œå­—ç¬¦å¯¹é½: ,ch
 
-"µ÷ÓÃ Gundo: <leader>g
-"ºô³ö Tagbar: F3
-"¸ñÊ½»¯ Javascript/HTML/CSS: Ctrl + f
+"è°ƒç”¨ Gundo: <leader>g
+"å‘¼å‡º Tagbar: F3
+"æ ¼å¼åŒ– Javascript/HTML/CSS: Ctrl + f
 
 "VirtaulEnv
 "Deactivate the current virtualen: <leader>pd
 "List all virtualenvs: <leader>pl
 "To activate a virtualenv: <leader>pa
 
-"ºô³öwinmanager: F9
-"¹Ø±Õwinmanager: ctrl + F9
+"å‘¼å‡ºwinmanager: F9
+"å…³é—­winmanager: ctrl + F9
 
-"×î´ó»¯µ±Ç°·Ö¸î´°¿Ú: Ctrl+w+o
+"æœ€å¤§åŒ–å½“å‰åˆ†å‰²çª—å£: Ctrl+w+o
 "easy motion:
-"           ¿ìËÙ¶¨Î»: <leader<leader>w
-"           ¶¨Î»µ½Ö¸¶¨×Ö·û: <leader>leader>f<char>
+"           å¿«é€Ÿå®šä½: <leader<leader>w
+"           å®šä½åˆ°æŒ‡å®šå­—ç¬¦: <leader>leader>f<char>
 
-"ÏÔÊ¾/Òş²Ø¹¤¾ßÀ¸: F2
-"Éú³ÉtagÎÄ¼ş: F12
-"Ò»¼ü±àÒë: F5
+"æ˜¾ç¤º/éšè—å·¥å…·æ : F2
+"ç”Ÿæˆtagæ–‡ä»¶: F12
+"ä¸€é”®ç¼–è¯‘: F5
 "make: F6
-"Ìí¼Ó°æÈ¨ĞÅÏ¢: F4
-"´úÂëÕÛµş: <space>
+"æ·»åŠ ç‰ˆæƒä¿¡æ¯: F4
+"ä»£ç æŠ˜å : <space>
 
 
 
-if(has("win32") || has("win95") || has("win64") || has("win16")) "ÅĞ¶¨µ±Ç°²Ù×÷ÏµÍ³ÀàĞÍ
+if(has("win32") || has("win95") || has("win64") || has("win16")) "åˆ¤å®šå½“å‰æ“ä½œç³»ç»Ÿç±»å‹
     let g:iswindows=1
 else
     let g:iswindows=0
 endif
 
-set nocompatible "²»ÒªvimÄ£·ÂviÄ£Ê½£¬½¨ÒéÉèÖÃ£¬·ñÔò»áÓĞºÜ¶à²»¼æÈİµÄÎÊÌâ
+set nocompatible "ä¸è¦vimæ¨¡ä»¿viæ¨¡å¼ï¼Œå»ºè®®è®¾ç½®ï¼Œå¦åˆ™ä¼šæœ‰å¾ˆå¤šä¸å…¼å®¹çš„é—®é¢˜
 filetype off
 
 " set the runtime path to include Vundle and initialize
@@ -74,6 +74,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'marijnh/tern_for_vim'
+Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'skammer/vim-css-color'
 Plugin 'szw/vim-ctrlspace'
@@ -89,7 +90,7 @@ Plugin 'einars/js-beautify'
 
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'Lokaltog/vim-powerline'
+"Plugin 'Lokaltog/vim-powerline'
 Plugin 'wlangstroth/vim-racket'
 
 ""UltiSnips
@@ -115,17 +116,17 @@ endif
 
 
 
-""""""""""""""""»ù´¡Éè¶¨""""""""""""""""
+""""""""""""""""åŸºç¡€è®¾å®š""""""""""""""""
 
 if(g:iswindows==1)
         behave mswin
 endif
-syntax on"´ò¿ª¸ßÁÁ
+syntax on"æ‰“å¼€é«˜äº®
 filetype indent on
 filetype on
 autocmd BufEnter * lcd %:p:h
 if has("autocmd")
-    filetype plugin indent on "¸ù¾İÎÄ¼ş½øĞĞËõ½ø
+    filetype plugin indent on "æ ¹æ®æ–‡ä»¶è¿›è¡Œç¼©è¿›
     augroup vimrcEx
         au!
         autocmd FileType text setlocal textwidth=78
@@ -135,23 +136,23 @@ if has("autocmd")
                     \ endif
     augroup END
 else
-    "ÖÇÄÜËõ½ø£¬ÏàÓ¦µÄÓĞcindent£¬¹Ù·½Ëµautoindent¿ÉÒÔÖ§³Ö¸÷ÖÖÎÄ¼şµÄËõ½ø£¬µ«ÊÇĞ§¹û»á±ÈÖ»Ö§³ÖC/C++µÄcindentĞ§¹û»á²îÒ»µã£¬µ«±ÊÕß²¢Ã»ÓĞ¿´³öÀ´
-    set autoindent " always set autoindenting on 
+    "æ™ºèƒ½ç¼©è¿›ï¼Œç›¸åº”çš„æœ‰cindentï¼Œå®˜æ–¹è¯´autoindentå¯ä»¥æ”¯æŒå„ç§æ–‡ä»¶çš„ç¼©è¿›ï¼Œä½†æ˜¯æ•ˆæœä¼šæ¯”åªæ”¯æŒC/C++çš„cindentæ•ˆæœä¼šå·®ä¸€ç‚¹ï¼Œä½†ç¬”è€…å¹¶æ²¡æœ‰çœ‹å‡ºæ¥
+    set autoindent " always set autoindenting on
 endif " has("autocmd")
-set tabstop=4 shiftwidth=4 expandtab "ÈÃÒ»¸ötabµÈÓÚ4¸ö¿Õ¸ñ
-"set nowrap "²»×Ô¶¯»»ĞĞ
-set hlsearch "¸ßÁÁÏÔÊ¾½á¹û
-set incsearch "ÔÚÊäÈëÒªËÑË÷µÄÎÄ×ÖÊ±£¬vim»áÊµÊ±Æ¥Åä
-set backspace=indent,eol,start whichwrap+=<,>,[,] "ÔÊĞíÍË¸ñ¼üµÄÊ¹ÓÃ
-if(g:iswindows==1) "ÔÊĞíÊó±êµÄÊ¹ÓÃ
-    "·ÀÖ¹linuxÖÕ¶ËÏÂÎŞ·¨¿½±´
+set tabstop=4 shiftwidth=4 expandtab "è®©ä¸€ä¸ªtabç­‰äº4ä¸ªç©ºæ ¼
+"set nowrap "ä¸è‡ªåŠ¨æ¢è¡Œ
+set hlsearch "é«˜äº®æ˜¾ç¤ºç»“æœ
+set incsearch "åœ¨è¾“å…¥è¦æœç´¢çš„æ–‡å­—æ—¶ï¼Œvimä¼šå®æ—¶åŒ¹é…
+set backspace=indent,eol,start whichwrap+=<,>,[,] "å…è®¸é€€æ ¼é”®çš„ä½¿ç”¨
+if(g:iswindows==1) "å…è®¸é¼ æ ‡çš„ä½¿ç”¨
+    "é˜²æ­¢linuxç»ˆç«¯ä¸‹æ— æ³•æ‹·è´
     if has('mouse')
         set mouse=a
     endif
     au GUIEnter * simalt ~x
 endif
 
-"¹Ø±ÕÃùÉùÌáÊ¾
+"å…³é—­é¸£å£°æç¤º
 "set noerrorbells
 "set novisualbell
 set noeb vb t_vb=
@@ -161,40 +162,40 @@ au GUIEnter * set vb t_vb=
 set langmenu=en_US
 let $LANG='en_US'
 
-"ÖĞÎÄ±àÂë
+"ä¸­æ–‡ç¼–ç 
 set encoding=utf-8
 ""GBK
 "set fenc=cp936
 "set fileencodings=cp936,ucs-bom,utf-8
-""UTF-8 
+""UTF-8
 set fenc=utf-8
 set fileencodings=ucs-bom,utf-8,cp936
 if(g:iswindows==1)
-		    source $VIMRUNTIME/delmenu.vim
-			    source $VIMRUNTIME/menu.vim
-				    language messages zh_CN.utf-8
-			endif
+    source $VIMRUNTIME/delmenu.vim
+    source $VIMRUNTIME/menu.vim
+    language messages zh_CN.utf-8
+endif
 if v:lang =~? '^\(zh\)\|\(ja\)\|\(ko\)'
-		    set ambiwidth=double
+    set ambiwidth=double
 endif
 set nobomb
 
-"×ÖÌåµÄÉèÖÃ
+"å­—ä½“çš„è®¾ç½®
 if(g:iswindows==1)
-		set guifont=Bitstream_Vera_Sans_Mono_for_Po:h13:cANSI"¼Ç×¡¿Õ¸ñÓÃÏÂ»®Ïß´úÌæÅ¶
-		set gfw=Ó×Ô²:h13.5:cGB2312
+		set guifont=Bitstream_Vera_Sans_Mono_for_Po:h13:cANSI"è®°ä½ç©ºæ ¼ç”¨ä¸‹åˆ’çº¿ä»£æ›¿å“¦
+		set gfw=å¹¼åœ†:h13.5:cGB2312
 endif
 if(g:iswindows==0)
-		set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline\ 12
+		set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline\ 11
 		"set gfw=YouYuan\ 11.5
-		set gfw=Microsoft\ YaHei\ Mono\ 11.5
+		set gfw=Microsoft\ YaHei\ Mono\ 10
 endif
 
-set nu"ÏÔÊ¾ĞĞºÅ
-set guitablabel=%N.%t "¸øtab¼ÓÉÏĞòºÅ
+set nu"æ˜¾ç¤ºè¡Œå·
+set guitablabel=%N.%t "ç»™tabåŠ ä¸Šåºå·
 
-"ÅäÉ«
-set t_Co=256"ÖÕ¶ËÅäÉ«¼æÈİÉèÖÃ
+"é…è‰²
+set t_Co=256"ç»ˆç«¯é…è‰²å…¼å®¹è®¾ç½®
 colorscheme solarized
 "if has('gui_running')
 "    set background=light
@@ -202,7 +203,7 @@ colorscheme solarized
     set background=dark
 "endif
 
-""""""""""""""""»ù´¡Éè¶¨""""""""""""""""
+""""""""""""""""åŸºç¡€è®¾å®š""""""""""""""""
 
 
 
@@ -211,7 +212,7 @@ colorscheme solarized
 "Set mapleader
 let mapleader = ","
 
-"°´Ctrl+Enter£¬»Ø³µ²¢Ëõ½øÒ»¸ötab
+"æŒ‰Ctrl+Enterï¼Œå›è½¦å¹¶ç¼©è¿›ä¸€ä¸ªtab
 inoremap <C-Return> <CR><CR><C-o>k<Tab>
 
 "Shift + w to exit
@@ -221,10 +222,10 @@ nmap <S-w> :q<CR>
 nmap [b :bp<CR>
 nmap ]b :bn<CR>
 
-"""Ctrl + s to save 
+"""Ctrl + s to save
 "" If the current buffer has never been saved, it will have no name,
 " call the file browser to save it, otherwise just save it.
-command -nargs=0 -bar Update if &modified 
+command -nargs=0 -bar Update if &modified
                            \|    if empty(bufname('%')) && has('gui_running')
                            \|        browse confirm write
                            \|    else
@@ -243,7 +244,7 @@ if has("gui_running")
     inoremap <C-v> <Esc>"+p
 endif
 
-"ÅäÖÃÎÄ¼ş±à¼­
+"é…ç½®æ–‡ä»¶ç¼–è¾‘
 if has("unix")
         "Fast reloading of the vimrc/gvimrc
         map <silent> <leader>ss :source ~/.vim/vimrc<cr>
@@ -266,20 +267,20 @@ else
         autocmd! bufwritepost _gvimrc source $VIM/_gvimrc source $VIM/_gvimrc
 endif
 
-"¿ìËÙ±à¼­µ±Ç°ÎÄ¼şËùÔÚÂ·¾¶ÏÂµÄ¸÷ÎÄ¼ş
+"å¿«é€Ÿç¼–è¾‘å½“å‰æ–‡ä»¶æ‰€åœ¨è·¯å¾„ä¸‹çš„å„æ–‡ä»¶
 if(g:iswindows==1)
         map <leader>e :e <C-R>=expand("%:p:h") . "\\" <CR>
 else
         map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 endif
 
-"ÓÃ¿Õ¸ñ¼üÀ´¿ª¹Ø´úÂëÕÛµş
+"ç”¨ç©ºæ ¼é”®æ¥å¼€å…³ä»£ç æŠ˜å 
 "set foldenable
 "set foldmethod=indent
 "nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 
-"²é¿´Ò»ÏÂÄ³¼¸ĞĞµÄ×Ö·ûÊÇ·ñÔÚÍ¬Ò»ÁĞÉÏ
-map ,ch :call SetColorColumn()<CR>"°´ÏÂ,ch ¾Í¿ÉÒÔ½«µ±Ç°¹â±êÏÂµÄÁĞ¸ßÁÁ£¬ÔÙ°´ÏÂÒ»´Î£¬È¡Ïû¸ßÁÁ£»²¢ÇÒ¿ÉÒÔÍ¬Ê±¶àÁĞ¸ßÁÁ
+"æŸ¥çœ‹ä¸€ä¸‹æŸå‡ è¡Œçš„å­—ç¬¦æ˜¯å¦åœ¨åŒä¸€åˆ—ä¸Š
+map ,ch :call SetColorColumn()<CR>"æŒ‰ä¸‹,ch å°±å¯ä»¥å°†å½“å‰å…‰æ ‡ä¸‹çš„åˆ—é«˜äº®ï¼Œå†æŒ‰ä¸‹ä¸€æ¬¡ï¼Œå–æ¶ˆé«˜äº®ï¼›å¹¶ä¸”å¯ä»¥åŒæ—¶å¤šåˆ—é«˜äº®
 function! SetColorColumn()
     let col_num = virtcol(".")
     let cc_list = split(&cc, ',')
@@ -296,7 +297,7 @@ endfunction
 
 """""""""""""""" Languages """"""""""""""""
 
-"¶ÔcºÍc++,Ê¹ÓÃopenmpÊ±,ÊäÈë#ºó²»×Ô¶¯¶¥¸ñ
+"å¯¹cå’Œc++,ä½¿ç”¨openmpæ—¶,è¾“å…¥#åä¸è‡ªåŠ¨é¡¶æ ¼
 "au BufRead,BufNewFile *.c set cinkeys-=0#
 "au BufRead,BufNewFile *.cpp set cinkeys-=0#
 
@@ -327,10 +328,10 @@ autocmd filetype pandoc setlocal spell spelllang=en_us
 
 
 
-""""""""""""""""¶îÍâ¹¦ÄÜ""""""""""""""""
+""""""""""""""""é¢å¤–åŠŸèƒ½""""""""""""""""
 
 "IDE
-"µ÷ÕûcscopeºÍctagsµÄ¼æÈİĞÔ
+"è°ƒæ•´cscopeå’Œctagsçš„å…¼å®¹æ€§
 if has("cscope")
         set cscopequickfix=s-,c-,d-,i-,t-,e-
         set csto=0
@@ -338,7 +339,7 @@ if has("cscope")
         set csverb
 endif
 
-"Îª c/cpp ÎÄ¼şÉú³Étag
+"ä¸º c/cpp æ–‡ä»¶ç”Ÿæˆtag
 map <F12> :call Do_CsTag()<CR>
 nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>:copen<CR>
 nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
@@ -404,7 +405,7 @@ function Do_CsTag()
     endif
 endfunction
 
-"µ¥¸öÎÄ¼ş±àÒë
+"å•ä¸ªæ–‡ä»¶ç¼–è¯‘
 map <F5> :call Do_OneFileMake()<CR>
 function Do_OneFileMake()
     if expand("%:p:h")!=getcwd()
@@ -467,7 +468,7 @@ function Do_OneFileMake()
     endif
     execute "copen"
 endfunction
-"½øĞĞmakeµÄÉèÖÃ
+"è¿›è¡Œmakeçš„è®¾ç½®
 map <F6> :call Do_make()<CR>
 map <c-F6> :silent make clean<CR>
 function Do_make()
@@ -476,7 +477,7 @@ function Do_make()
     execute "copen"
 endfunction
 
-""""""""""""""""¶îÍâ¹¦ÄÜ""""""""""""""""
+""""""""""""""""é¢å¤–åŠŸèƒ½""""""""""""""""
 
 
 
@@ -500,7 +501,7 @@ autocmd FileType html,css EmmetInstall
 "Gundo
 map <leader>g :GundoToggle<CR>
 
-"Indent Guides(¶ÔÆëÏß)
+"Indent Guides(å¯¹é½çº¿)
 let g:indent_guides_guide_size=1
 
 "Jshint2
@@ -529,12 +530,12 @@ endif
 set grepprg=grep\ -nH\ $*
 
 "NERD_commenter
-"let loaded_nerd_comments=1 "¹Ø±ÕNERD_commenter
-let NERDShutUp=1 "¹â±êËùÔÚĞĞÉÏ£¬°´ÏÂÒ»´Îctrl+hÊÇ×¢ÊÍ£¬ÔÙ°´ÏÂÒ»´ÎÊÇÈ¡Ïû×¢ÊÍ
-		 "ÄÚ½¨µÄÖ¸Áî 
-		 ",cm ÊÇ¶àĞĞ×¢ÊÍ£¬ÀàËÆC++µÄ/**/
-		 ",cuÊÇÈ¡Ïû×¢ÊÍ
-		 
+"let loaded_nerd_comments=1 "å…³é—­NERD_commenter
+let NERDShutUp=1 "å…‰æ ‡æ‰€åœ¨è¡Œä¸Šï¼ŒæŒ‰ä¸‹ä¸€æ¬¡ctrl+hæ˜¯æ³¨é‡Šï¼Œå†æŒ‰ä¸‹ä¸€æ¬¡æ˜¯å–æ¶ˆæ³¨é‡Š
+"å†…å»ºçš„æŒ‡ä»¤
+",cm æ˜¯å¤šè¡Œæ³¨é‡Šï¼Œç±»ä¼¼C++çš„/**/
+",cuæ˜¯å–æ¶ˆæ³¨é‡Š
+
 "tagbar
 nmap <F3> :TagbarToggle<CR>
 let g:tagbar_width=28
@@ -569,12 +570,37 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
+" Airline
+let g:airline_detect_modified=1
+let g:airline_detect_paste=1
+
+let g:airline_theme = 'powerlineish'
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_left_sep = 'â®€'
+let g:airline_left_alt_sep = 'â®'
+let g:airline_right_sep = 'â®‚'
+let g:airline_right_alt_sep = 'â®ƒ'
+let g:airline_symbols.branch = 'â­ '
+let g:airline_symbols.readonly = 'â­¤'
+let g:airline_symbols.linenr = 'â­¡'
+
+let g:airline#extensions#tabline#enabled = 1 " Automatically displays all buffers when there's only one tab open.
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#show_tab_type = 1
+let g:airline#extensions#tabline#left_sep = 'â®€'
+let g:airline#extensions#tabline#left_alt_sep = 'â®'
+
+let g:airline#extensions#tagbar#enabled = 1 " tagbar integration
+
+
 "VIMIM
-let g:vimim_map='c-space'"¿ª¹ØÊäÈë·¨
-let g:vimim_punctuation=0"²»Ê¹ÓÃÖĞÎÄ±êµã
+let g:vimim_map='c-space'"å¼€å…³è¾“å…¥æ³•
+let g:vimim_punctuation=0"ä¸ä½¿ç”¨ä¸­æ–‡æ ‡ç‚¹
 "let g:vimim_toggle='pinyin,google,sogou,baidu'
-let g:vimim_shuangpin='flypy'"Ë«Æ´·½°¸ÎªĞ¡º×
-"let g:vimim_cloud='qq.shuangpin.flypy'"ÔÆÊäÈë
+let g:vimim_shuangpin='flypy'"åŒæ‹¼æ–¹æ¡ˆä¸ºå°é¹¤
+"let g:vimim_cloud='qq.shuangpin.flypy'"äº‘è¾“å…¥
 let g:vimim_cloud=0
 let g:vimim_mycloud=0
 
@@ -583,13 +609,13 @@ let g:vimim_mycloud=0
 autocmd FileType javascript noremap <buffer> <C-f> :call JsBeautify()<cr>
 autocmd FileType html,xhtml noremap <buffer> <C-f> :call HtmlBeautify()<cr>
 "for css or scss
-autocmd FileType css noremap <buffer> <C-f> :call CSSBeautify()<cr> 
+autocmd FileType css noremap <buffer> <C-f> :call CSSBeautify()<cr>
 
 "Powerline
 "set guifont=PowerlineSymbols\ for\ Powerline
-set t_Co=256
-let g:Powerline_symbols = 'fancy'
-set laststatus=2
+"set t_Co=256
+"let g:Powerline_symbols = 'fancy'
+"set laststatus=2
 
 ""UltiSnips
 "Handle all issues between YCM and UltiSnips via: http://stackoverflow.com/a/18685821/1436873
@@ -611,7 +637,7 @@ endfunction
 au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsListSnippets="<c-e>"
-" this mapping Enter key to <C-y> to chose the current highlight item 
+" this mapping Enter key to <C-y> to chose the current highlight item
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
@@ -622,13 +648,13 @@ map <leader>pl :VirtualEnvList<CR>
 map <leader>pa :VirtualEnvActivate
 
 "winmanager
-"map <c-w><c-f> :FirstExplorerWindow<cr> 
-"map <c-w><c-b> :BottomExplorerWindow<cr> 
+"map <c-w><c-f> :FirstExplorerWindow<cr>
+"map <c-w><c-b> :BottomExplorerWindow<cr>
 "map <c-w><c-t> :WMToggle<cr>
 let g:winManagerWidth =25
 let g:AutoOpenWinManager =1
-"let g:persistentBehaviour = 0"µ±winmanagerÊÇ×îºóÒ»¸ö·Ö¸î´°¿ÚÊ±£¬×Ô¶¯ÍË³övim
-"ÓÃwinmanager¼¯³ÉºÏ²¢ÏÔÊ¾NERDTreeºÍTagList 
+"let g:persistentBehaviour = 0"å½“winmanageræ˜¯æœ€åä¸€ä¸ªåˆ†å‰²çª—å£æ—¶ï¼Œè‡ªåŠ¨é€€å‡ºvim
+"ç”¨winmanageré›†æˆåˆå¹¶æ˜¾ç¤ºNERDTreeå’ŒTagList
 "let g:winManagerWindowLayout='NERDTree|TagList'
 let g:winManagerWindowLayout='NERDTree|BufExplorer'
 let g:NERDTree_title='NERD Tree'
@@ -646,10 +672,10 @@ nmap <C-F9> :WMToggle<cr>
 "nmap <leader>zw :ZoomWin<CR>
 
 "Syntastic
-"let g:syntastic_check_on_open=1"×Ô¶¯¼ì²â
+"let g:syntastic_check_on_open=1"è‡ªåŠ¨æ£€æµ‹
 "let g:syntastic_mode_map = {'mode': 'passive',
 "						\ 'active_filetypes': ['python', 'c', 'cpp', 'tcl', 'lua', 'sh']}"passive + active_filetypes = whitelist
-"let g:syntastic_stl_fromat = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w} $%t]'"ĞÅÏ¢À¸ÏÔÊ¾Éè¶¨
+"let g:syntastic_stl_fromat = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w} $%t]'"ä¿¡æ¯æ æ˜¾ç¤ºè®¾å®š
 "let g:syntastic_python_checker = ['pep8']
 "let g:syntastic_c_checker = ['gcc']
 "let g:syntastic_cpp_checker = ['gcc']
