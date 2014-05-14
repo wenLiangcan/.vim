@@ -101,6 +101,7 @@ Plugin 'vim-scripts/winmanager'
 Plugin 'vim-scripts/xmledit'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/ZoomWin'
+Plugin 'vim-scripts/nginx.vim'
 
 
 " scripts not on GitHub
@@ -320,6 +321,9 @@ au BufRead,BufNewFile *.rl set filetype=ragel
 
 "Markdown
 autocmd filetype pandoc setlocal spell spelllang=en_us
+
+"Nginx
+au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | set filetype=nginx | endif
 
 """""""""""""""" Languages """"""""""""""""
 
