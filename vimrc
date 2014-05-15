@@ -102,6 +102,7 @@ Plugin 'vim-scripts/xmledit'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/ZoomWin'
 Plugin 'vim-scripts/nginx.vim'
+Plugin 'leafo/moonscript-vim'
 
 
 " scripts not on GitHub
