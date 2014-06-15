@@ -103,6 +103,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/ZoomWin'
 Plugin 'vim-scripts/nginx.vim'
 Plugin 'leafo/moonscript-vim'
+Plugin 'hdima/python-syntax'
 
 
 " scripts not on GitHub
