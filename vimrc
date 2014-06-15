@@ -104,6 +104,7 @@ Plugin 'vim-scripts/ZoomWin'
 Plugin 'vim-scripts/nginx.vim'
 Plugin 'leafo/moonscript-vim'
 Plugin 'hdima/python-syntax'
+Plugin 'fisadev/vim-isort'
 
 
 " scripts not on GitHub
@@ -309,6 +310,7 @@ au BufRead,BufNewFile *.js set foldmethod=indent
 autocmd filetype python setlocal et sta sw=4 sts=4
 autocmd filetype python setlocal foldmethod=indent
 set foldlevel=99
+autocmd BufWritePost *py Isort " sort imports
 
 "Golang
 autocmd BufWritePost *.go call CallGoimports()
