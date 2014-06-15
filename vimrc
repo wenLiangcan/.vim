@@ -310,7 +310,7 @@ au BufRead,BufNewFile *.js set foldmethod=indent
 autocmd filetype python setlocal et sta sw=4 sts=4
 autocmd filetype python setlocal foldmethod=indent
 set foldlevel=99
-autocmd BufWritePost *py Isort " sort imports
+autocmd filetype python autocmd BufWritePre * Isort " sort imports
 
 "Golang
 autocmd BufWritePost *.go call CallGoimports()
