@@ -66,25 +66,32 @@ Plugin 'lilydjwg/fcitx.vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'vim-scripts/HTML-AutoCloseTag'
 Plugin 'vim-scripts/Indent-Guides'
-Plugin 'Shutnik/jshint2.vim'
 Plugin 'vim-scripts/LaTeX-Suite-aka-Vim-LaTeX'
 Plugin 'jiazhoulvke/MarkdownView'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
-Plugin 'marijnh/tern_for_vim'
+
+""" Js
+Plugin 'marijnh/tern_for_vim'   " Javascript completion
+Plugin 'ahayman/vim-nodejs-complete'   " Nodejs completion
+" Linter
+Plugin 'Shutnik/jshint2.vim'
+" Format
+""jsbeautify
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'einars/js-beautify'
+" Hightlight
+Plugin 'vim-scripts/jQuery'
+
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'skammer/vim-css-color'
 Plugin 'szw/vim-ctrlspace'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Blackrush/vim-gocode'
-Plugin 'vim-scripts/jQuery'
 
-""jsbeautify
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'einars/js-beautify'
 
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-pandoc/vim-pandoc'
