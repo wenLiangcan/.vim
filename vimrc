@@ -33,6 +33,7 @@
 "make: F6
 "添加版权信息: F4
 "代码折叠: <space>
+" Search and replace the word under the cursor: <Leader>s
 
 
 
@@ -297,6 +298,9 @@ function! SetColorColumn()
         execute "set cc-=".col_num
     endif
 endfunction
+
+" Search and replace the word under the cursor
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 
 """""""""""""""" Shortcuts """"""""""""""""
 
