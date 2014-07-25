@@ -217,7 +217,7 @@ colorscheme solarized
 
 
 
-"""""""""""""""" Shortcuts """"""""""""""""
+"""""""""""""""" Key Mapping """"""""""""""""
 
 "Set mapleader
 let mapleader = ","
@@ -335,7 +335,19 @@ function ToggleWrap()
   endif
 endfunction
 
-"""""""""""""""" Shortcuts """"""""""""""""
+" Move cursor by display lines when wrapping
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
+
+"""""""""""""""" Key Mapping """"""""""""""""
 
 
 
