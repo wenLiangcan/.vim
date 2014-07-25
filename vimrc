@@ -346,6 +346,10 @@ vnoremap <Down> gj
 vnoremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
+nnoremap 0 g0
+nnoremap $ g$
+vnoremap 0 g0
+vnoremap $ g$
 
 """""""""""""""" Key Mapping """"""""""""""""
 
