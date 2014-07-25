@@ -112,7 +112,7 @@ Plugin 'vim-scripts/nginx.vim'
 Plugin 'leafo/moonscript-vim'
 Plugin 'hdima/python-syntax'
 Plugin 'fisadev/vim-isort'
-
+Plugin 'wting/rust.vim'
 
 " scripts not on GitHub
 Plugin 'git://fedorapeople.org/home/fedora/wwoods/public_git/vim-scripts.git', {'name': 'vim-systemd'}
