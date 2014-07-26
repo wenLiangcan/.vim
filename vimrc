@@ -704,10 +704,4 @@ nmap <C-F9> :WMToggle<cr>
 "let g:syntastic_c_checker = ['gcc']
 "let g:syntastic_cpp_checker = ['gcc']
 
-"AuthorInfo
-let g:vimrc_author='wenLiangcan'
-let g:vimrc_email='wenLiangcan@gmail.com'
-"let g:vimrc_homepage=''
-nmap <F4> :AuthorInfoDetect<cr>
-
 """""""""""""""" Plugins """"""""""""""""
