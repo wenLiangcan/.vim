@@ -528,7 +528,7 @@ endfunction
 
 "enable emmet for html/css
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+autocmd FileType html,css,xml EmmetInstall
 
 "Gundo
 map <leader>g :GundoToggle<CR>
