@@ -96,6 +96,7 @@ Plugin 'Blackrush/vim-gocode'
 
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
 "Plugin 'Lokaltog/vim-powerline'
 Plugin 'wlangstroth/vim-racket'
 
