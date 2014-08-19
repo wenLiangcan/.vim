@@ -87,7 +87,7 @@ Plugin 'vim-scripts/jQuery'
 
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'skammer/vim-css-color'
+Plugin 'lilydjwg/colorizer'
 Plugin 'szw/vim-ctrlspace'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Blackrush/vim-gocode'
