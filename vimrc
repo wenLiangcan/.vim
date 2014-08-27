@@ -115,7 +115,6 @@ Plugin 'vim-scripts/nginx.vim'
 Plugin 'leafo/moonscript-vim'
 Plugin 'klen/python-mode'
 Plugin 'fisadev/vim-isort'
-Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'wting/rust.vim'
 
 " scripts not on GitHub
