@@ -667,6 +667,15 @@ let g:UltiSnipsListSnippets="<c-e>"
 " CONFLICT with some plugins like tpope/Endwise
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
+" python-mode
+"" pymode quickfix window setting
+let g:pymode_quickfix_minheight = 2
+"" Default code checkers
+let g:pymode_lint_checkers = ['pylint', 'pep8', 'mccabe']
+"" pymode-rope
+"" Turn on autocompletion when typing a period
+let g:pymode_rope_complete_on_dot = 0
+
 "vim-virtualenv
 map <leader>pd :VirtaulEnvDeactivate<CR>
 map <leader>pl :VirtualEnvList<CR>
