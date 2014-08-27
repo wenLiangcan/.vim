@@ -675,6 +675,10 @@ let g:pymode_lint_checkers = ['pylint', 'pep8', 'mccabe']
 "" pymode-rope
 "" Turn on autocompletion when typing a period
 let g:pymode_rope_complete_on_dot = 0
+" Set pylint options
+let g:pymode_lint_options_pylint =
+            \ {'no-docstring-rgx': '__.*',
+            \  'docstring-min-length': 99999}
 
 "vim-virtualenv
 map <leader>pd :VirtaulEnvDeactivate<CR>
