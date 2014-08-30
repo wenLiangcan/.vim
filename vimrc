@@ -114,6 +114,7 @@ Plugin 'vim-scripts/ZoomWin'
 Plugin 'vim-scripts/nginx.vim'
 Plugin 'leafo/moonscript-vim'
 Plugin 'klen/python-mode'
+Plugin 'lepture/vim-jinja'
 Plugin 'fisadev/vim-isort'
 Plugin 'wting/rust.vim'
 
