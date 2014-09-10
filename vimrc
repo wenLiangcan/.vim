@@ -686,6 +686,8 @@ let g:pymode_lint_options_pylint =
 map <leader>pd :VirtaulEnvDeactivate<CR>
 map <leader>pl :VirtualEnvList<CR>
 map <leader>pa :VirtualEnvActivate
+" Check code on every save
+let g:pymode_lint_on_write = 0
 
 "winmanager
 "map <c-w><c-f> :FirstExplorerWindow<cr>
