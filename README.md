@@ -10,4 +10,4 @@ Install Vundle:
 
 Start VIM/GVIM and run the command:
 
-        :PluginInstall
+        :BundleInstall
