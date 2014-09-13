@@ -63,7 +63,8 @@ Plugin 'vim-scripts/HTML-AutoCloseTag'
 Plugin 'vim-scripts/Indent-Guides'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
+"Plugin 'vim-scripts/winmanager'
+"Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 
 """ Js
@@ -99,7 +100,6 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 Plugin 'taurenchieftain/vim-vala'
-Plugin 'vim-scripts/winmanager'
 Plugin 'vim-scripts/xmledit'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/ZoomWin'
@@ -680,17 +680,17 @@ let g:pymode_lint_options_pylint =
 let g:pymode_lint_on_write = 0
 
 "winmanager
-let g:winManagerWidth =25
-let g:AutoOpenWinManager =1
-let g:winManagerWindowLayout='NERDTree'
-let g:NERDTree_title='NERD Tree'
-function! NERDTree_Start()
-    exec 'NERDTree'
-endfunction
-function! NERDTree_IsValid()
-    return 1
-endfunction
-nmap <F9> <C-w>l:WMToggle<cr>
+"let g:winManagerWidth =25
+"let g:AutoOpenWinManager =1
+"let g:winManagerWindowLayout='NERDTree'
+"let g:NERDTree_title='NERD Tree'
+"function! NERDTree_Start()
+    "exec 'NERDTree'
+"endfunction
+"function! NERDTree_IsValid()
+    "return 1
+"endfunction
+"nmap <F9> <C-w>l:WMToggle<cr>
 
 "ZoomWin
 "nmap <leader>zw :ZoomWin<CR>
