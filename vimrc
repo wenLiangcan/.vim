@@ -680,7 +680,20 @@ let g:pymode_lint_options_pylint =
 let g:pymode_lint_on_write = 0
 
 " vimfiler
-nmap <F9> :VimFilerExplorer<cr>
+let g:vimfiler_tree_opened_icon = '▾'
+let g:vimfiler_tree_closed_icon = '▸'
+let g:vimfiler_tree_leaf_icon = ' '
+let g:vimfiler_readonly_file_icon = '⭤'
+" Edit file in new tab
+let g:vimfiler_edit_action = 'tabopen'
+" Edit files by double click
+autocmd FileType vimfiler
+            \ nmap <buffer> <2-LeftMouse> <Plug>(vimfiler_edit_file)
+
+nmap <F9> :call ToggleVimFilerExplorer()<cr>
+function! ToggleVimFilerExplorer()
+    :VimFilerExplorer -status -parent
+endfunction
 
 "winmanager
 "let g:winManagerWidth =25
