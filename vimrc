@@ -111,6 +111,7 @@ Plugin 'klen/python-mode'
 Plugin 'lepture/vim-jinja'
 Plugin 'fisadev/vim-isort'
 Plugin 'wting/rust.vim'
+Plugin 'justinmk/vim-syntax-extra'
 
 " scripts not on GitHub
 Plugin 'git://fedorapeople.org/home/fedora/wwoods/public_git/vim-scripts.git', {'name': 'vim-systemd'}
