@@ -693,7 +693,7 @@ autocmd FileType vimfiler
 
 nmap <F9> :call ToggleVimFilerExplorer()<cr>
 function! ToggleVimFilerExplorer()
-    :VimFilerExplorer -status -parent
+    :VimFilerExplorer -status -parent -winwidth=25
 endfunction
 
 "winmanager
