@@ -106,7 +106,6 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 Plugin 'taurenchieftain/vim-vala'
-Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'vim-scripts/winmanager'
 Plugin 'vim-scripts/xmledit'
 Plugin 'Valloric/YouCompleteMe'
@@ -681,11 +680,6 @@ let g:pymode_lint_options_pylint =
             \ {'disable': 'C0111',
             \  'no-docstring-rgx': '__.*',
             \  'docstring-min-length': 99999}
-
-"vim-virtualenv
-map <leader>pd :VirtaulEnvDeactivate<CR>
-map <leader>pl :VirtualEnvList<CR>
-map <leader>pa :VirtualEnvActivate
 " Check code on every save
 let g:pymode_lint_on_write = 0
 
