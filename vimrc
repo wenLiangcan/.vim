@@ -14,7 +14,7 @@
 "呼出 Tagbar: F3
 "格式化 Javascript/HTML/CSS: Ctrl + f
 
-" 开关 winmanager: F9
+" 开关 Vimfiler: F9
 
 "最大化当前分割窗口: Ctrl+w+o
 "easy motion:
@@ -678,6 +678,9 @@ let g:pymode_lint_options_pylint =
             \  'docstring-min-length': 99999}
 " Check code on every save
 let g:pymode_lint_on_write = 0
+
+" vimfiler
+nmap <F9> :VimFilerExplorer<cr>
 
 "winmanager
 "let g:winManagerWidth =25
