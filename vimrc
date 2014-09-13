@@ -14,8 +14,7 @@
 "呼出 Tagbar: F3
 "格式化 Javascript/HTML/CSS: Ctrl + f
 
-"呼出winmanager: F9
-"关闭winmanager: ctrl + F9
+" 开关 winmanager: F9
 
 "最大化当前分割窗口: Ctrl+w+o
 "easy motion:
@@ -55,7 +54,6 @@ Plugin 'gmarik/vundle'
 " scripts on GitHub repos
 Plugin 'vim-scripts/ag.vim'
 Plugin 'vim-scripts/a.vim'
-"Plugin 'vim-scripts/bufexplorer.zip'
 Plugin 'rosenfeld/conque-term'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'mattn/emmet-vim'
@@ -688,16 +686,14 @@ let g:AutoOpenWinManager =1
 "let g:persistentBehaviour = 0"当winmanager是最后一个分割窗口时，自动退出vim
 "用winmanager集成合并显示NERDTree和TagList
 "let g:winManagerWindowLayout='NERDTree|TagList'
-let g:winManagerWindowLayout='NERDTree' "|BufExplorer'
+let g:winManagerWindowLayout='NERDTree'
 let g:NERDTree_title='NERD Tree'
-"let bufExplorerMaxHeight=30
 function! NERDTree_Start()
     exec 'NERDTree'
 endfunction
 function! NERDTree_IsValid()
     return 1
 endfunction
-"nmap <F9> :WMToggle<cr>:q<cr>
 nmap <F9> :WMToggle<cr>
 
 "ZoomWin
