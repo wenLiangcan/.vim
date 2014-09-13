@@ -697,8 +697,8 @@ endfunction
 function! NERDTree_IsValid()
     return 1
 endfunction
-nmap <F9> :WMToggle<cr>:q<cr>
-nmap <C-F9> :WMToggle<cr>
+"nmap <F9> :WMToggle<cr>:q<cr>
+nmap <F9> :WMToggle<cr>
 
 "ZoomWin
 "nmap <leader>zw :ZoomWin<CR>
