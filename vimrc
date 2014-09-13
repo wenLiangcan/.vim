@@ -14,11 +14,6 @@
 "呼出 Tagbar: F3
 "格式化 Javascript/HTML/CSS: Ctrl + f
 
-"VirtaulEnv
-"Deactivate the current virtualen: <leader>pd
-"List all virtualenvs: <leader>pl
-"To activate a virtualenv: <leader>pa
-
 "呼出winmanager: F9
 "关闭winmanager: ctrl + F9
 
