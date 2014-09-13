@@ -55,7 +55,7 @@ Plugin 'gmarik/vundle'
 " scripts on GitHub repos
 Plugin 'vim-scripts/ag.vim'
 Plugin 'vim-scripts/a.vim'
-Plugin 'vim-scripts/bufexplorer.zip'
+"Plugin 'vim-scripts/bufexplorer.zip'
 Plugin 'rosenfeld/conque-term'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'mattn/emmet-vim'
@@ -688,9 +688,9 @@ let g:AutoOpenWinManager =1
 "let g:persistentBehaviour = 0"当winmanager是最后一个分割窗口时，自动退出vim
 "用winmanager集成合并显示NERDTree和TagList
 "let g:winManagerWindowLayout='NERDTree|TagList'
-let g:winManagerWindowLayout='NERDTree|BufExplorer'
+let g:winManagerWindowLayout='NERDTree' "|BufExplorer'
 let g:NERDTree_title='NERD Tree'
-let bufExplorerMaxHeight=30
+"let bufExplorerMaxHeight=30
 function! NERDTree_Start()
     exec 'NERDTree'
 endfunction
