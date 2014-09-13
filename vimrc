@@ -680,14 +680,8 @@ let g:pymode_lint_options_pylint =
 let g:pymode_lint_on_write = 0
 
 "winmanager
-"map <c-w><c-f> :FirstExplorerWindow<cr>
-"map <c-w><c-b> :BottomExplorerWindow<cr>
-"map <c-w><c-t> :WMToggle<cr>
 let g:winManagerWidth =25
 let g:AutoOpenWinManager =1
-"let g:persistentBehaviour = 0"当winmanager是最后一个分割窗口时，自动退出vim
-"用winmanager集成合并显示NERDTree和TagList
-"let g:winManagerWindowLayout='NERDTree|TagList'
 let g:winManagerWindowLayout='NERDTree'
 let g:NERDTree_title='NERD Tree'
 function! NERDTree_Start()
