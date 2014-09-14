@@ -552,13 +552,6 @@ let jshint2_height = 12 "Set default height of error list
 "inoremap <silent><F3> <C-O>:lprevious<CR>
 "vnoremap <silent><F3> :lprevious<CR>
 
-"latex-suite
-filetype plugin on
-if(g:iswindows==1)
-        set shellslash
-endif
-set grepprg=grep\ -nH\ $*
-
 "NERD_commenter
 "let loaded_nerd_comments=1 "关闭NERD_commenter
 let NERDShutUp=1 "光标所在行上，按下一次ctrl+h是注释，再按下一次是取消注释
@@ -694,7 +687,7 @@ autocmd FileType vimfiler
 
 nmap <F9> :call ToggleVimFilerExplorer()<cr>
 function! ToggleVimFilerExplorer()
-    :VimFilerExplorer -status -parent -winwidth=25
+    :VimFilerExplorer -status -parent -winwidth=25 -auto-cd
 endfunction
 
 "winmanager
