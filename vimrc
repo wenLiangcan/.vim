@@ -55,7 +55,6 @@ Plugin 'gmarik/vundle'
 Plugin 'vim-scripts/ag.vim'
 Plugin 'vim-scripts/a.vim'
 Plugin 'rosenfeld/conque-term'
-Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'lilydjwg/fcitx.vim'
 Plugin 'sjl/gundo.vim'
@@ -516,17 +515,6 @@ endfunction
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion =  1
 let g:ycm_autoclose_preview_window_after_insertion = 1
-
-"DoxygenToolkit
-"map fg : Dox<cr>
-"let g:DoxygenToolkit_authorName="wenLiangcan"
-"let g:DoxygenToolkit_licenseTag="My own license\<enter>"
-"let g:DoxygenToolkit_undocTag="DOXIGEN_SKIP_BLOCK"
-"let g:DoxygenToolkit_briefTag_pre = "@brief\t"
-"let g:DoxygenToolkit_paramTag_pre = "@param\t"
-"let g:DoxygenToolkit_returnTag = "@return\t"
-"let g:DoxygenToolkit_briefTag_funcName = "no"
-"let g:DoxygenToolkit_maxFunctionProtoLines = 30
 
 "enable emmet for html/css
 let g:user_emmet_install_global = 0
