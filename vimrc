@@ -151,12 +151,13 @@ set tabstop=4 shiftwidth=4 expandtab "让一个tab等于4个空格
 set hlsearch "高亮显示结果
 set incsearch "在输入要搜索的文字时，vim会实时匹配
 set backspace=indent,eol,start whichwrap+=<,>,[,] "允许退格键的使用
-if(g:iswindows==1) "允许鼠标的使用
+if(g:iswindows==1)
     "防止linux终端下无法拷贝
-    if has('mouse')
-        set mouse=a
-    endif
     au GUIEnter * simalt ~x
+endif
+
+if has('mouse') "允许鼠标的使用
+    set mouse=a
 endif
 
 "关闭鸣声提示
