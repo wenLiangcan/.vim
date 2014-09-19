@@ -195,9 +195,10 @@ if(g:iswindows==1)
 		set gfw=幼圆:h13.5:cGB2312
 endif
 if(g:iswindows==0)
-		set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline\ 11
+		"set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline\ 11
+        set guifont=Monaco\ 11
 		"set gfw=YouYuan\ 11.5
-		set gfw=Microsoft\ YaHei\ Mono\ 10
+		set gfw=Microsoft\ YaHei\ Mono\ 11
 endif
 
 set nu"显示行号
