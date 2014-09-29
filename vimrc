@@ -117,11 +117,6 @@ Plugin 'derekwyatt/vim-scala'
 " scripts not on GitHub
 Plugin 'git://fedorapeople.org/home/fedora/wwoods/public_git/vim-scripts.git', {'name': 'vim-systemd'}
 
-if(g:iswindows==0)
-    filetype plugin indent off
-    set runtimepath+=/usr/share/go/misc/vim
-endif
-
 
 
 """"""""""""""""基础设定""""""""""""""""
@@ -212,6 +207,9 @@ colorscheme solarized
 "else
     set background=dark
 "endif
+
+" Change location of swap file
+set directory=~/tmp,/tmp
 
 """"""""""""""""基础设定""""""""""""""""
 
