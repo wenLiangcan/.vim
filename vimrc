@@ -348,8 +348,8 @@ endfunction
 "Ragel
 au BufRead,BufNewFile *.rl set filetype=ragel
 
-"Markdown
-autocmd filetype pandoc setlocal spell spelllang=en_us,cjk
+" Spell checking
+autocmd filetype pandoc,text,gitcommit,rst setlocal spell spelllang=en_us,cjk
 
 "Nginx
 au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | set filetype=nginx | endif
