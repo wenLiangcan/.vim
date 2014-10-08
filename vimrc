@@ -354,6 +354,9 @@ autocmd filetype pandoc,text,gitcommit,rst setlocal spell spelllang=en_us,cjk
 "Nginx
 au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | set filetype=nginx | endif
 
+" Scala
+autocmd BufRead,BufNewFile *.sc set filetype=scala
+
 """""""""""""""" Languages """"""""""""""""
 
 
