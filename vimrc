@@ -317,6 +317,9 @@ function ToggleWrap()
   endif
 endfunction
 
+autocmd filetype javascript :nnoremap <buffer> <C-LeftMouse> <LeftMouse>:TernDef<CR>
+autocmd filetype python :nnoremap <buffer> <C-LeftMouse> <LeftMouse>:call pymode#rope#goto_definition()<CR>
+
 """""""""""""""" Key Mapping """"""""""""""""
 
 
