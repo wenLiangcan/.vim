@@ -623,6 +623,18 @@ let g:tagbar_type_rust = {
         \ 'i:impls,trait implementations'
     \ ]
 \ }
+" MoonScript
+let g:tagbar_type_moon = {
+    \ 'ctagstype' : 'moonscript',
+    \ 'kinds' : [
+        \ 'v:variables',
+        \ 'f:functions',
+        \ 'c:classes',
+        \ 'm:methods',
+        \ 's:static properties',
+        \ 'p:properties'
+    \ ]
+\ }
 
 " Airline
 set laststatus=2
