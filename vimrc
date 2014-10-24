@@ -522,6 +522,8 @@ endfunction
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion =  1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_auto_trigger = 0
 
 "enable emmet for html/css
 let g:user_emmet_install_global = 0
