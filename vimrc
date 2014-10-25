@@ -101,6 +101,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'taurenchieftain/vim-vala'
 Plugin 'vim-scripts/xmledit'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
 Plugin 'vim-scripts/ZoomWin'
 Plugin 'vim-scripts/nginx.vim'
 Plugin 'leafo/moonscript-vim'
@@ -664,6 +665,7 @@ let g:airline#extensions#tabline#left_sep = '⮀'
 let g:airline#extensions#tabline#left_alt_sep = '⮁'
 
 let g:airline#extensions#tagbar#enabled = 1 " tagbar integration
+let g:airline#extensions#syntastic#enabled = 1 " syntastic integration
 
 
 "Jsbeautify
@@ -752,12 +754,29 @@ endfunction
 "nmap <leader>zw :ZoomWin<CR>
 
 "Syntastic
-"let g:syntastic_check_on_open=1"自动检测
-"let g:syntastic_mode_map = {'mode': 'passive',
-"						\ 'active_filetypes': ['python', 'c', 'cpp', 'tcl', 'lua', 'sh']}"passive + active_filetypes = whitelist
-"let g:syntastic_stl_fromat = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w} $%t]'"信息栏显示设定
+let g:syntastic_check_on_open=1 " 自动检测
+let g:syntastic_auto_loc_list = 1
+autocmd FileType c,cpp let g:ycm_show_diagnostics_ui = 0  " Interaction with YouCompleteMe
+
+" symbols via: https://coderwall.com/p/zneomg
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_style_error_symbol = '✠'
+let g:syntastic_warning_symbol = '∆'
+let g:syntastic_style_warning_symbol = '≈'
+
+" passive + active_filetypes = whitelist
+let g:syntastic_mode_map = {'mode': 'passive',
+            \ 'active_filetypes': ['c', 'cpp', 'lua', 'sh', 'ruby', 'rust', 'go', 'html', 'racket', 'vala', 'zsh', 'coffee'],
+            \ 'passive_filetypes': ['python', 'javascript']}
+" let g:syntastic_stl_fromat = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w} $%t]'"信息栏显示设定
+let g:syntastic_c_checkers = ['gcc']
+let g:syntastic_cpp_checkers = ['gcc']
+let g:syntastic_sh_checkers = ['sh']
+let g:syntastic_zsh_checkers = ['zsh']
+let g:syntastic_racket_checkers = ['racket']
+let g:syntastic_go_checkers = ['go', 'govet']
+let g:syntastic_html_checkers = ['jshint']
+let g:syntastic_coffee_checkers = ['coffee']
 "let g:syntastic_python_checker = ['pep8']
-"let g:syntastic_c_checker = ['gcc']
-"let g:syntastic_cpp_checker = ['gcc']
 
 """""""""""""""" Plugins """"""""""""""""
