@@ -720,6 +720,8 @@ let g:pymode_lint_options_pylint =
             \  'docstring-min-length': 99999}
 " Check code on every save
 let g:pymode_lint_on_write = 0
+let g:pymode_rope = 0
+let g:pymode_rope_lookup_project = 0
 
 " vimfiler
 let g:vimfiler_tree_opened_icon = '▾'
