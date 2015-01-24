@@ -361,6 +361,7 @@ au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | set fi
 
 " Scala
 autocmd BufRead,BufNewFile *.sc set filetype=scala
+autocmd filetype scala setlocal et sta sw=4 sts=4
 
 """""""""""""""" Languages """"""""""""""""
 
