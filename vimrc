@@ -114,6 +114,7 @@ Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimfiler.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'kongo2002/fsharp-vim'
 
 " scripts not on GitHub
 Plugin 'git://fedorapeople.org/home/fedora/wwoods/public_git/vim-scripts.git', {'name': 'vim-systemd'}
