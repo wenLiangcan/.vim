@@ -530,7 +530,7 @@ let g:ycm_auto_trigger = 0
 
 "enable emmet for html/css
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,xml EmmetInstall
+autocmd FileType html,css,xml,jinja EmmetInstall
 
 "Gundo
 map <leader>g :GundoToggle<CR>
