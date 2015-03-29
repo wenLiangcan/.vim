@@ -676,7 +676,7 @@ let g:airline#extensions#syntastic#enabled = 1 " syntastic integration
 "Jsbeautify
 "map <C-f> :call JsBeautify()<CR>
 autocmd FileType javascript,json noremap <buffer> <C-f> :call JsBeautify()<cr>
-autocmd FileType html,xhtml noremap <buffer> <C-f> :call HtmlBeautify()<cr>
+autocmd FileType html,xhtml,jinja noremap <buffer> <C-f> :call HtmlBeautify()<cr>
 "for css or scss
 autocmd FileType css noremap <buffer> <C-f> :call CSSBeautify()<cr>
 
