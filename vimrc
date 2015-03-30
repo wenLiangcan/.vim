@@ -322,6 +322,13 @@ endfunction
 autocmd filetype javascript :nnoremap <buffer> <C-LeftMouse> <LeftMouse>:TernDef<CR>
 autocmd filetype python :nnoremap <buffer> <C-LeftMouse> <LeftMouse>:call pymode#rope#goto_definition()<CR>
 
+
+" using `Alt+{h,j,k,l}` to navigate between windows
+nnoremap <A-j> <C-w>j
+nnoremap <A-h> <C-w>h
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+
 """""""""""""""" Key Mapping """"""""""""""""
 
 
