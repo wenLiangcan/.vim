@@ -115,6 +115,8 @@ Plugin 'Shougo/vimfiler.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'kongo2002/fsharp-vim'
+" This plugin highlights the matching HTML tag when the cursor is positioned on a tag. 
+Plugin 'gregsexton/MatchTag'
 
 " scripts not on GitHub
 Plugin 'git://fedorapeople.org/home/fedora/wwoods/public_git/vim-scripts.git', {'name': 'vim-systemd'}
