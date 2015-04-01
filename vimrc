@@ -117,6 +117,8 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'kongo2002/fsharp-vim'
 " This plugin highlights the matching HTML tag when the cursor is positioned on a tag. 
 Plugin 'gregsexton/MatchTag'
+" Adapt the window proportions after Vim is resized.
+Plugin 'vim-scripts/ProportionalResize'
 
 " scripts not on GitHub
 Plugin 'git://fedorapeople.org/home/fedora/wwoods/public_git/vim-scripts.git', {'name': 'vim-systemd'}
