@@ -82,6 +82,7 @@ Plugin 'vim-scripts/jQuery'
 Plugin 'kchmck/vim-coffee-script'
 
 Plugin 'bling/vim-airline'
+Plugin 'edkolev/tmuxline.vim'
 Plugin 'altercation/vim-colors-solarized'
 "Plugin 'lilydjwg/colorizer'
 Plugin 'ap/vim-css-color'
@@ -686,6 +687,10 @@ let g:airline#extensions#tabline#left_alt_sep = '⮁'
 let g:airline#extensions#tagbar#enabled = 1 " tagbar integration
 let g:airline#extensions#syntastic#enabled = 1 " syntastic integration
 
+let g:tmuxline_preset = {
+      \'b'    : ['#h', '#(whoami)', '#S'],
+      \'cwin' : '#I: #W',
+      \'y'    : ['%R', '%a', '%Y-%m-%d']}
 
 "Jsbeautify
 "map <C-f> :call JsBeautify()<CR>
