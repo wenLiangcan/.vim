@@ -124,6 +124,9 @@ Plugin 'kongo2002/fsharp-vim'
 Plugin 'gregsexton/MatchTag'
 " Adapt the window proportions after Vim is resized.
 Plugin 'vim-scripts/ProportionalResize'
+" Provide smart input assistant
+Plugin 'kana/vim-smartinput'
+Plugin 'luochen1990/rainbow'
 
 " scripts not on GitHub
 Plugin 'git://fedorapeople.org/home/fedora/wwoods/public_git/vim-scripts.git', {'name': 'vim-systemd'}
@@ -805,5 +808,8 @@ let g:syntastic_go_checkers = ['go', 'govet']
 let g:syntastic_html_checkers = ['jshint']
 let g:syntastic_coffee_checkers = ['coffee']
 "let g:syntastic_python_checker = ['pep8']
+
+" rainbow
+let g:rainbow_active = 1
 
 """""""""""""""" Plugins """"""""""""""""
