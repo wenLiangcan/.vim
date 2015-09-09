@@ -76,6 +76,7 @@ Plugin 'Shutnik/jshint2.vim'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
 " Hightlight
+Plugin 'pangloss/vim-javascript'
 Plugin 'vim-scripts/jQuery'
 
 Plugin 'bling/vim-airline'
