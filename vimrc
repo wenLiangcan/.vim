@@ -79,6 +79,8 @@ Plugin 'einars/js-beautify'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-scripts/jQuery'
 
+Plugin 'kchmck/vim-coffee-script'
+
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 "Plugin 'lilydjwg/colorizer'
