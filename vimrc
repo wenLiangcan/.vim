@@ -807,7 +807,7 @@ let g:syntastic_sh_checkers = ['sh']
 let g:syntastic_zsh_checkers = ['zsh']
 let g:syntastic_racket_checkers = ['racket']
 let g:syntastic_go_checkers = ['go', 'govet']
-let g:syntastic_html_checkers = ['jshint']
+let g:syntastic_html_checkers = ['tidy', 'jshint']
 let g:syntastic_coffee_checkers = ['coffee']
 "let g:syntastic_python_checker = ['pep8']
 
