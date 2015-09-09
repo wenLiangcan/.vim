@@ -120,7 +120,7 @@ Plugin 'Shougo/vimfiler.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'kongo2002/fsharp-vim'
-" This plugin highlights the matching HTML tag when the cursor is positioned on a tag. 
+" This plugin highlights the matching HTML tag when the cursor is positioned on a tag.
 Plugin 'gregsexton/MatchTag'
 " Adapt the window proportions after Vim is resized.
 Plugin 'vim-scripts/ProportionalResize'
@@ -240,6 +240,8 @@ inoremap <C-Return> <CR><CR><C-o>k<Tab>
 "Shift + w to exit
 nmap <S-w> :q<CR>
 
+" Shift + Return to open new line in insert mode
+imap <S-Return> <Esc>o
 "next/previous buffer
 nmap [b :bp<CR>
 nmap ]b :bn<CR>
