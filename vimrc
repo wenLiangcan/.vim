@@ -86,7 +86,7 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'altercation/vim-colors-solarized'
 "Plugin 'lilydjwg/colorizer'
 Plugin 'ap/vim-css-color'
-Plugin 'szw/vim-ctrlspace'
+" Plugin 'szw/vim-ctrlspace'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Blackrush/vim-gocode'
 
