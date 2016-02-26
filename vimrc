@@ -82,6 +82,7 @@ Plugin 'vim-scripts/jQuery'
 Plugin 'kchmck/vim-coffee-script'
 
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'altercation/vim-colors-solarized'
 "Plugin 'lilydjwg/colorizer'
