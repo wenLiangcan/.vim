@@ -81,6 +81,9 @@ Plugin 'vim-scripts/jQuery'
 
 Plugin 'kchmck/vim-coffee-script'
 
+Plugin 'Quramy/tsuquyomi'
+Plugin 'leafgarland/typescript-vim'
+
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'edkolev/tmuxline.vim'
@@ -97,6 +100,7 @@ Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'junegunn/goyo.vim'
 "Plugin 'Lokaltog/vim-powerline'
+Plugin 'vim-scripts/paredit.vim'
 Plugin 'wlangstroth/vim-racket'
 
 ""UltiSnips
@@ -121,6 +125,7 @@ Plugin 'Shougo/vimfiler.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'kongo2002/fsharp-vim'
+Plugin 'keith/swift.vim'
 " This plugin highlights the matching HTML tag when the cursor is positioned on a tag.
 Plugin 'gregsexton/MatchTag'
 " Adapt the window proportions after Vim is resized.
@@ -201,13 +206,13 @@ set nobomb
 
 "字体的设置
 if(g:iswindows==1)
-		set guifont=Bitstream_Vera_Sans_Mono_for_Po:h13:cANSI"记住空格用下划线代替哦
-		set gfw=幼圆:h13.5:cGB2312
+    set guifont=Bitstream_Vera_Sans_Mono_for_Po:h13:cANSI"记住空格用下划线代替哦
+    set gfw=幼圆:h13.5:cGB2312
 else
-		"set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline\ 11
-        set guifont=Monaco\ 11
-		"set gfw=YouYuan\ 11.5
-		set gfw=Microsoft\ YaHei\ Mono\ 11
+    "set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline\ 11
+    set guifont=Monaco\ 11
+    "set gfw=YouYuan\ 11.5
+    set gfw=Microsoft\ YaHei\ Mono\ 11
 endif
 
 set nu"显示行号
