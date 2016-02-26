@@ -67,7 +67,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'majutsushi/tagbar'
 
 """ Js
-Plugin 'marijnh/tern_for_vim'   " Javascript completion
+" Plugin 'marijnh/tern_for_vim'   " Javascript completion
 Plugin 'ahayman/vim-nodejs-complete'   " Nodejs completion
 " Linter
 Plugin 'Shutnik/jshint2.vim'
