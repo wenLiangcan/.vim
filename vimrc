@@ -202,8 +202,7 @@ set nobomb
 if(g:iswindows==1)
 		set guifont=Bitstream_Vera_Sans_Mono_for_Po:h13:cANSI"记住空格用下划线代替哦
 		set gfw=幼圆:h13.5:cGB2312
-endif
-if(g:iswindows==0)
+else
 		"set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline\ 11
         set guifont=Monaco\ 11
 		"set gfw=YouYuan\ 11.5
@@ -548,6 +547,18 @@ let g:ycm_autoclose_preview_window_after_completion =  1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_auto_trigger = 0
+" This option controls for which Vim filetypes should YCM be turned off.
+" let g:ycm_filetype_blacklist = {
+      " \ 'tagbar' : 1,
+      " \ 'qf' : 1
+      " \}
+" This option controls for which Vim filetypes should the YCM semantic completion engine be turned off.
+" let g:ycm_filetype_specific_completion_to_disable = {
+      " \ 'gitcommit': 1
+      " \}
+if(g:iswindows==0)
+    let g:ycm_rust_src_path = '/usr/local/src/rust/src'
+endif
 
 "enable emmet for html/css
 let g:user_emmet_install_global = 0
